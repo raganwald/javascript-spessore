@@ -8,13 +8,15 @@ frontmatter:
 
 mainmatter:
 
+  markdown/mainmatter/introduction/title.md
+
+    markdown/mainmatter/introduction/objects.md
+
+    markdown/mainmatter/introduction/binding-times.md
+
   markdown/mainmatter/objects/title.md
 
-  markdown/mainmatter/objects/what.md
-
-  markdown/mainmatter/pro-forma/binding-times.md
-
-  markdown/mainmatter/pro-forma/objects.md
+    markdown/mainmatter/objects/outline.md
 
   markdown/mainmatter/pro-forma/metaobjects.md
 
