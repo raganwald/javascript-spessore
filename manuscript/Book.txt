@@ -1,3 +1,23 @@
-chapter1.txt
-chapter2.txt
-chapter3.txt
+frontmatter:
+
+  markdown/frontmatter/foreword.md
+
+  markdown/frontmatter/lisp.md
+
+  markdown/frontmatter/sample.md
+
+mainmatter:
+
+  markdown/mainmatter/objects/title.md
+
+  markdown/mainmatter/objects/what.md
+
+  markdown/mainmatter/pro-forma/binding-times.md
+
+  markdown/mainmatter/pro-forma/objects.md
+
+  markdown/mainmatter/pro-forma/metaobjects.md
+
+  markdown/mainmatter/pro-forma/protocols.md
+
+backmatter:
