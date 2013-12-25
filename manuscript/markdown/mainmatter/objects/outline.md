@@ -1,3 +1,5 @@
+## encapsulation
+
 ## object-1s, object-2s, and primitive protocols
 
 ## queries, updates, and degenerate methods

@@ -12,7 +12,9 @@ mainmatter:
 
     markdown/mainmatter/introduction/objects.md
 
-    markdown/mainmatter/introduction/binding-times.md
+    markdown/mainmatter/introduction/why.md
+
+    markdown/mainmatter/introduction/late-binding.md
 
   markdown/mainmatter/objects/title.md
 

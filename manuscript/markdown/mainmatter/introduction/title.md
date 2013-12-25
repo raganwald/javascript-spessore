@@ -1,1 +1,3 @@
-# A Brief Introduction
+# What is Object-Oriented Programming?
+
+![](images/oop.png)

@@ -10,7 +10,7 @@ Objects seem simple enough: They hold state, they receive messages, they process
 
 ### messages and method invocations
 
-![A nine year-old messenger boy](/manuscript/images/messenger.jpg)
+![A nine year-old messenger boy](images/messenger.jpg)
 
 Smalltalk speaks of "messages." The metaphor of a message is very clear. A message is composed and sent from one entity (the "sender") to one entity (the "recipient"). The sender specifies the identity of the recipient. The message may contain information for the recipient, instructions to perform some task, or a question to be answered. An immediate reply may be requested, or the sender may trust the message's recipient to act appropriately. The metaphor of the "message" emphasizes the arms-length relationship between sender and recipient.[^protocols]
 
