@@ -37,54 +37,6 @@ The way to build a simulation is to provide each simulated entity such as the ca
 
 The key need is to be able to have entities be independent decision-making units that respond to events from outside of themselves. In essence, we're describing computing units. Computation has, at its heart, a program and some kind of storage representing its state. Although impractical, each entity in a simulation could be a Turing Machine with a long tape.
 
-And thus when we think of "objects," we think of independent computing devices, each with their own storage representing their state.
+And thus when we think of "objects," we think of independent computing devices, each with their own storage representing their state: **An object is an entity that use handlers to respond to messages. It maintains internal state, and its handlers are responsible for querying and/or updating its state**.
 
-### the javascript state of affairs
-
-In JavaScript, objects have one obvious way to represent state. All JavaScript objects can store references to values by key. For example:
-
-    var snafu = { acronym: 'SNAFU', full: "Situation Normal, All Feduck Up" };
-    var fubar = { acronym: 'FUBAR', full: "Feduck Up Beyond All Recognition" };
-
-In JavaScript, an object can store any value by associating a reference to that value with a key. JavaScript objects are values, so you can also write:
-
-    var dictionary = {
-      snafu: { acronym: 'SNAFU', full: "Situation Normal, All Feduck Up" },
-      fubar: { acronym: 'FUBAR', full: "Feduck Up Beyond All Recognition" }
-    };
-
-JavaScript functions are values, so you can easily associate functions with keys:
-
-    var math = {
-      plusOne: function (number) { return number + 1; }
-      minusOne: function (number) { return number - 1; }
-    };
-
-While these are all technically objects, they miss the essence of objects, namely that they are not independent decision-making units with their own storage. Here's something a little closer to the Smalltalk notion of an object:
-
-    var counter = {
-      state: 0,
-      prev: function () { return --counter.state; },
-      succ: function () { return ++counter.state; }
-    };
-
-This object has two functions, but they are not simply values hanging off it. They are methods, they exist to query and modify the counter's state. When we write:
-
-    counter.succ();
-      //=> 1
-
-We are sending the `succ` message to the counter, and it is responding to our message with `1`. This is a very simple example of what we can call a "proper" object, an object that has state and methods that interact with its own state.
-
-In the Smalltalk ideal the only way for objects to interact with each other is through messages. This is not the case in JavaScript. In our above example, we can directly mutate the counter's state without sending it a message:
-
-    counter.state = 42;
-      //=> 42
-
-    counter.succ();
-      //=> 43
-
-In JavaScript, object state is not private by default. You have to either find a way to hide object state, or you have to employ a convention of not having objects meddle with each other's internals.
-
-### so what is an object?
-
-In summary, an object is an entity that use handlers to respond to messages. It maintains internal state, and its handlers are responsible for querying and/or updating its state. In a language like JavaScript, we reply on convention to prevent objects from meddling with each other's internal state.
+We'll have a closer look at implementing objects in Javascript a little later in this book.

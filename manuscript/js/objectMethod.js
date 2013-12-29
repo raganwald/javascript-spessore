@@ -1,5 +1,22 @@
 // objectMethod.js
 
+function applyWithFlavours (befores, inside, afters, args) {
+  var that = this;
+  befores.forEach(function (fn) {
+    fn.apply(that, args)
+  });
+  return afters.reduce(
+    function (return_value, after_behaviour) {
+       var new_return = after_behaviour.call(that, return_value);
+       if (typeof(new_return) === 'undefined') {
+         return return_value;
+       }
+       else return new_return;
+    },
+    inside.apply(this, args)
+  );
+};
+
 function objectMethod (object, method_name, optional_body) {
 
   if (object[method_name] == null ||
@@ -9,20 +26,7 @@ function objectMethod (object, method_name, optional_body) {
 
     function composite_method () {
       var args = [].slice.call(arguments, 0);
-      var that = this;
-      composite_method.before.forEach(function (fn) {
-        fn.apply(that, args)
-      });
-      return composite_method.after.reduce(
-        function (return_value, after_behaviour) {
-           var new_return = after_behaviour.call(that, return_value);
-           if (typeof(new_return) === 'undefined') {
-             return return_value;
-           }
-           else return new_return;
-        },
-        composite_method.inside.apply(this, args)
-      );
+      applyWithFlavours(composite_method.before, compsite_method.inside, composite_method.after, args);
     };
 
     Object.defineProperty(composite_method, 'before', {

@@ -1,6 +1,6 @@
-# Metaobjects
-
 ## templates and creation by value
+
+## metaclasses and meta-metaobjects
 
 ## immediate, forward, and late-binding of metaobjects
 

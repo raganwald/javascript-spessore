@@ -12,16 +12,24 @@ mainmatter:
 
     markdown/mainmatter/introduction/objects.md
 
-    markdown/mainmatter/introduction/why.md
+    markdown/mainmatter/introduction/metaobjects.md
 
-    markdown/mainmatter/introduction/late-binding.md
+    markdown/mainmatter/introduction/protocols.md
 
   markdown/mainmatter/objects/title.md
 
-    markdown/mainmatter/objects/outline.md
+    markdown/mainmatter/pro-forma/objects.md
 
-  markdown/mainmatter/pro-forma/metaobjects.md
+  markdown/mainmatter/metaobjects/title.md
 
-  markdown/mainmatter/pro-forma/protocols.md
+    markdown/mainmatter/metaobjects/constructors.md
+
+    markdown/mainmatter/metaobjects/classes-and-prototypes.md
+
+    markdown/mainmatter/pro-forma/metaobjects.md
+
+  markdown/mainmatter/protocols/title.md
+
+    markdown/mainmatter/pro-forma/protocols.md
 
 backmatter:

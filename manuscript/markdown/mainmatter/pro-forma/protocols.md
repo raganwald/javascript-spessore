@@ -1,5 +1,3 @@
-# Protocols
-
 ## prototype chaining
 
 ## single inheritance
