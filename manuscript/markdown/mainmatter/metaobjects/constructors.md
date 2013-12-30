@@ -1,6 +1,6 @@
 ## JavaScript's Constructors
 
-Metaobjects have one key responsibility: *Defining shared object behaviour*. Although it's not strictly required, most object-oriented languages accomplish this by having metaobjects also construct each object.
+Metaobjects have one key responsibility: *Defining base object behaviour*. Although it's not strictly required, most object-oriented languages accomplish this by having metaobjects also construct each object.
 
 In classic JavaScript, any function can be used to construct a new object with the use of the `new` keyword. All functions have a `prototype` property even if they aren't intended to be used as constructors. You can change a function's prototype is you wish.
 
@@ -18,7 +18,9 @@ If we follow that reasoning, we think of constructors as our metaobjects, and co
 
 [^tt]: Most OO programmers prefer using polymorphism to explicitly testing `instanceof`. Wide use of explicit type testing is generally a design smell, but nevertheless it is a useful tool in some circumstances.
 
-JavaScript constructors are a convenience mechanism, nothing more. `new` operators and constructors aren't even necessary to create objects:
+### constructors are not metaobjects
+
+This thinking is mistaken. Constructors are not metaobjects. The `new` operator isn't even necessary to create objects:
 
     var NakedPrototype = {
       identity: 'naked'
@@ -27,7 +29,7 @@ JavaScript constructors are a convenience mechanism, nothing more. `new` operato
     Object.getPrototypeOf(unconstructedObject)
       //=> { identity: 'naked' }
 
-Furthermore, the `instanceof` operator doesn't do what it advertises. It appears to test whether a constructor created an object. But it doesn't, it tests whether an object and a function have compatible `prototype` properties.
+Furthermore, the `instanceof` operator doesn't do what it advertises. It appears to test whether a constructor created an object. But it actually tests whether an object and a function have compatible `prototype` properties.
 
 Here we are fooling the operator:
 
@@ -38,6 +40,11 @@ Here we are fooling the operator:
 
 It turns out that `instanceof` is fine when there is a 1:1 correspondence between constructors and prototypes, when we do not change prototypes dynamically, and when we use `new` for all objects, eschewing `Object.create`. But the moment we venture into deeper waters, they the required workarounds outweigh their convenience.
 
+If we want to test compatibility between an object and a prototype, we can and should do so directly:
+
+    NakedPrototype.isPrototypeOf(unconstructedObject)
+      //=> true
+
 The prototype always defines the behaviour of an object. JavaScript's "constructors," `new` operator, and its `instanceof` operator are convenient for programming within a narrow band of conventions, but are unreliable in the general case.
 
-Therefore, although constructors can be used create objects, we consider the object's prototype to be central to the idea of a metaobject. We do not rely on the `instanceof` operator, ever.
+Therefore, although constructors can be used create objects, we consider the object's prototype to be central to the idea of a metaobject. We do not rely on the `instanceof` operator and if we wish to test for prototype compatibility, we use the `isPrototypeOf` method instead.

@@ -1,20 +1,26 @@
 frontmatter:
 
-  markdown/frontmatter/foreword.md
+  markdown/frontmatter/title.md
 
-  markdown/frontmatter/lisp.md
+    markdown/frontmatter/foreword.md
 
-  markdown/frontmatter/sample.md
+    markdown/frontmatter/lisp.md
+
+    markdown/frontmatter/unpublished.md
 
 mainmatter:
 
-  markdown/mainmatter/introduction/title.md
+  markdown/mainmatter/mop/title.md
 
-    markdown/mainmatter/introduction/objects.md
+    markdown/mainmatter/mop/introduction.md
 
-    markdown/mainmatter/introduction/metaobjects.md
+    markdown/mainmatter/mop/objects.md
 
-    markdown/mainmatter/introduction/protocols.md
+    markdown/mainmatter/mop/metaobjects.md
+
+    markdown/mainmatter/mop/protocols.md
+
+    markdown/mainmatter/mop/summary.md
 
   markdown/mainmatter/objects/title.md
 
