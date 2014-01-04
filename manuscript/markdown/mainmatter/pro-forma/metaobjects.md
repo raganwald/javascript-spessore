@@ -1,15 +1,17 @@
-## templates and creation by value
+## To Do
 
-## metaclasses and meta-metaobjects
+### templates and creation by value
 
-## immediate, forward, and late-binding of metaobjects
+### metaclasses and meta-metaobjects
 
-## degenerate protocols
+### immediate, forward, and late-binding of metaobjects
 
-## eigenclasses, again
+### degenerate protocols
 
-## prototypes vs. classes: metaobject-1s vs. metaobject-2s
+### eigenclasses, again
 
-## contracts and liskov equivalence
+### prototypes vs. classes: metaobject-1s vs. metaobject-2s
 
-## metaobjects are not types, and types are not interfaces
+### contracts and liskov equivalence
+
+### metaobjects are not types, and types are not interfaces

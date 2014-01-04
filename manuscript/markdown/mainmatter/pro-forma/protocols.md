@@ -1,17 +1,19 @@
-## prototype chaining
+## To Do
 
-## single inheritance
+### prototype chaining
 
-## mixins and multiple inheritance
+### single inheritance
 
-## resolution: merge, override, and final
+### mixins and multiple inheritance
 
-## template method protocols
+### resolution: merge, override, and final
 
-## method guards and contracts
+### template method protocols
 
-## early and late method composition
+### method guards and contracts
 
-## multiple dispatch and generic functions
+### early and late method composition
 
-## pattern matching protocols
+### multiple dispatch and generic functions
+
+### pattern matching protocols

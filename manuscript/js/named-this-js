@@ -1,0 +1,25 @@
+"use strict";
+
+var allong = require('allong.es');
+var variadic = allong.es.variadic;
+
+function namedThis (fn) {
+  return variadic( function (args) {
+    return fn.apply(null, [this].concat(args));
+  });
+}
+
+var example = namedThis( function (me, name) {
+  console.log(me + ", " + name);
+});
+
+example.call('javascript', 'spessore')
+
+var foo = {
+  name: 'foo',
+  toString: namedThis( function (my) {
+    return "my name is " + my.name;
+  })
+}
+
+foo.toString()

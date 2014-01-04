@@ -1,6 +1,6 @@
 ## What is an Object?
 
-> A Smalltalk object can do exactly three things: Hold state (references to other objects), receive a message from itself or another object, and in the course of processing a message, send messages to itself or another object.—[Smalltalk on Wikipedia][smalltalk]
+> A Smalltalk object can do exactly three things: Hold state (references to other objects), receive a message from itself or another object, and in the course of processing a message, send messages to itself or another object.--[Smalltalk on Wikipedia][smalltalk]
 
 [smalltalk]: https://en.wikipedia.org/wiki/Smalltalk
 

@@ -6,9 +6,13 @@ frontmatter:
 
     markdown/frontmatter/lisp.md
 
-    markdown/frontmatter/unpublished.md
+    markdown/frontmatter/allonge.md
 
 mainmatter:
+
+  markdown/mainmatter/preamble/title.md
+
+    markdown/mainmatter/preamble/objects-and-references.md
 
   markdown/mainmatter/mop/title.md
 
@@ -23,6 +27,16 @@ mainmatter:
     markdown/mainmatter/mop/summary.md
 
   markdown/mainmatter/objects/title.md
+
+    markdown/mainmatter/objects/immutable-properties.md
+
+    markdown/mainmatter/objects/objects-and-functions.md
+
+    markdown/mainmatter/objects/accessors.md
+
+    markdown/mainmatter/objects/hiding.md
+
+    markdown/mainmatter/objects/ones-and-twos.md
 
     markdown/mainmatter/pro-forma/objects.md
 

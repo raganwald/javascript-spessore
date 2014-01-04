@@ -8,14 +8,12 @@ Teaching Lisp by implementing Lisp is a long-standing tradition. We read book af
 
 [^onevstwo]: A "Lisp-1" has a single namespace for both functions and other values. A "Lisp-2" has separate namespaces for functions and other values. To the extend that JavaScript resembles a Lisp, it resembles a Lisp-1. See [The function namespace](http://en.wikipedia.org/wiki/Common_Lisp#The_function_namespace).
 
-Building interpreters (and eventually compilers) may seem esoteric compared to tutorials demonstrating how to build a blogging engine, but there's a method to this madness. If you implement block scoping in a "toy" language, you gain a deep understanding of how closures really work in any language. You gain some insight into the implications with respect to memory and performance. If you write a Lisp that rewrites function calls in [Continuation Passing Style][CPS], you can't help but feel comfortable using JavaScript callbacks in [Node.js].
+Building interpreters (and eventually compilers) may seem esoteric compared to tutorials demonstrating how to build a blogging engine, but there's a method to this madness. If you implement block scoping in a "toy" language, you gain a deep understanding of how closures really work in any language. If you write a Lisp that rewrites function calls in [Continuation Passing Style][CPS], you can't help but feel comfortable using JavaScript callbacks in [Node.js].
 
 [CPS]: https://en.wikipedia.org/wiki/Continuation-passing_style
 [Node.js]: http://nodejs.org/about/
 
-The simple fact is that *implementing* a language feature teaches you a tremendous amount about how the feature works in a relatively short amount of time. And that goes double for implementing variations on the same feature--like dynamic vs block scoping or single vs multiple namespaces.
-
-That being said, you get the most mileage out of implementing language semantics, not language syntax. Semantics are the *meanings* of programs, syntax is merely the appearance. Writing parsers for both `compose = (a, b) -> (c) -> a(b(c))` in CoffeeScript and `function comnpose (a, b) { return function (c) { return a(b(c)); }; }` in JavaScript wouldn't teach you nearly as much as writing the code that implements closures. And it's the closures that make `compose` work the way it does.
+Implementing a language feature teaches you a tremendous amount about how the feature works in a relatively short amount of time. And that goes double for implementing variations on the same feature--like dynamic vs block scoping or single vs multiple namespaces.
 
 In this book, we are going to implement a number of different programming language semantics, all in JavaScript. We won't be choosing features at random; We aren't going to try to implement every possible type of programming language semantics. We won't explore dynamic vs block scoping, we won't implement call-by-name, and we will ignore the temptation to experiment with lazy evaluation.
 

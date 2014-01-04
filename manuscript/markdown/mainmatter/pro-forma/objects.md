@@ -1,20 +1,15 @@
-## encapsulation
+## To Do
 
-## object-1s, object-2s, and primitive protocols
+### queries, updates, and degenerate methods
 
-## queries, updates, and degenerate methods
+### object composition and delegation
 
-## object composition and delegation
+### state machines and strategies
 
-## state machines and strategies
+### nouns, verbs and commands
 
-## nouns, verbs and commands
+### pattern matching
 
-## pattern matching
+### method composition
 
-## method composition
-
-## immediate, forward, and late-binding
-
-## me, myself, and i
-
+### immediate, forward, and late-binding
