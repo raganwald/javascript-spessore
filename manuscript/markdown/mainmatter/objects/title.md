@@ -1,4 +1,4 @@
-# Objects and Methods
+# Objects
 
 ![Londinium 1 Lever Espresso Machine](images/erickson.jpg)[^erickson]
 
