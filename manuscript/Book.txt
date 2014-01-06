@@ -40,6 +40,12 @@ mainmatter:
 
     markdown/mainmatter/pro-forma/objects.md
 
+  markdown/mainmatter/methods/title.md
+
+    markdown/mainmatter/methods/what.md
+
+    markdown/mainmatter/methods/literal-vs-semantic.md
+
   markdown/mainmatter/metaobjects/title.md
 
     markdown/mainmatter/metaobjects/constructors.md
