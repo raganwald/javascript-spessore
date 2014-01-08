@@ -1,7 +1,12 @@
-## To Do
-
-### queries, updates, and degenerate methods
+## Composite Methods
 
 ### pattern matching
 
-### method composition
+### method combinators
+
+### guard clauses[^gc]
+
+[^gc]: http://c2.com/cgi/wiki?GuardClause
+
+### flavours
+

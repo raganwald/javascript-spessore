@@ -28,7 +28,11 @@ mainmatter:
 
   markdown/mainmatter/objects/title.md
 
+    markdown/mainmatter/objects/recap.md
+
     markdown/mainmatter/objects/immutable-properties.md
+
+    markdown/mainmatter/objects/copy-on-write.md
 
     markdown/mainmatter/objects/objects-and-functions.md
 
@@ -45,6 +49,8 @@ mainmatter:
     markdown/mainmatter/methods/what.md
 
     markdown/mainmatter/methods/literal-vs-semantic.md
+
+    markdown/mainmatter/methods/composite.md
 
   markdown/mainmatter/metaobjects/title.md
 
