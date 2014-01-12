@@ -1,4 +1,4 @@
-# Utility Functions
+## Utility Functions
 
 Throughout this book, we have used utility functions in our code snippets and examples. Here is a list of functions we've borrowed from other sources. Most are from [underscore][underscore] or [allong.es][allong.es].
 
