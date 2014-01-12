@@ -52,6 +52,8 @@ mainmatter:
 
     markdown/mainmatter/methods/composite.md
 
+    markdown/mainmatter/methods/method-objects.md
+
   markdown/mainmatter/metaobjects/title.md
 
     markdown/mainmatter/metaobjects/constructors.md
@@ -65,3 +67,7 @@ mainmatter:
     markdown/mainmatter/pro-forma/protocols.md
 
 backmatter:
+
+  markdown/backmatter/title.md
+
+    markdown/backmatter/utilities.md

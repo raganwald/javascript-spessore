@@ -2,10 +2,6 @@
 
 Since functions are values, objects can have functions as values:
 
-    var allong = require('allong.es');
-    var variadic = allong.es.variadic;
-    var map = allong.es.map;
-
     var getAll = variadic( function (object, propertyNames) {
       return map(propertyNames, function (name) { return object[name]; });
     });

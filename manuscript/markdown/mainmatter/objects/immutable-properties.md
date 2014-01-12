@@ -59,9 +59,6 @@ When we want to define multiple properties, we can also write:
 
 While we can't make the entire object immutable, we can define the properties we want to be immutable. Naturally, we can generalize this:
 
-    var allong = require('allong.es');
-    var tap = allong.es.tap;
-
     function immutable (propertiesAndValues) {
       return tap({}, function (object) {
         for (var key in propertiesAndValues) {

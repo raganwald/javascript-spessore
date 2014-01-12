@@ -37,9 +37,6 @@ So what kind of privacy does JavaScript provide? In order to access a property, 
 
 This is called *enumerating* an object's properties. Not only are they "public" in the sense that any code that knows the property's names can access it, but also, any code at all can enumerate them. You can do neat things with enumerable properties, such as:
 
-    var allong = require('allong.es');
-    map = allong.es.map;
-
     var descriptor = map(Object.keys(dictionary), function (key) {
       return key + ': "' + dictionary[key] + '"';
     }).join('; ');
@@ -94,9 +91,6 @@ One way to "hide" properties in JavaScript is to define them as properties with 
 ### Closures
 
 We saw earlier that it is possible to fake private instance variables by hiding references in a closure, e.g.
-
-    var allong = require('allong.es');
-    var tap = allong.es.tap;
 
     function immutable (propertiesAndValues) {
       return tap({}, function (object) {
