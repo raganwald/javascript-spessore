@@ -1,8 +1,8 @@
 ## Composite Methods
 
-One of the primary activities in programming is to *factor* programs or algorithms, to break them into smaller parts that can be reused or recombined in different ways.[^jargon]
+One of the primary activities in programming is to *factor* programs or algorithms, to break them into smaller parts that can be reused or recombined in different ways.
 
-[^jargon]: Common industry practice is to use the words "decompose" and "factor" interchangeably to refer to any breaking of code into smaller parts. Nevertheless, we will defy industry practice and use the word "decompose" to refer to breaking code into smaller parts whether those parts are to be recombined or reused or not, and use the word "factor" to refer to the stricter case of decomposition where the intention is to recombine or reuse the parts in different ways.
+> Common industry practice is to use the words "decompose" and "factor" interchangeably to refer to any breaking of code into smaller parts. Nevertheless, we will defy industry practice and use the word "decompose" to refer to breaking code into smaller parts whether those parts are to be recombined or reused or not, and use the word "factor" to refer to the stricter case of decomposition where the intention is to recombine or reuse the parts in different ways.
 
 Both methods and objects can and should be factored into reusable components that have a [single, well-defined responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle).[^martin]
 
