@@ -22,7 +22,7 @@ These four “distinctions” between other languages and JavaScript are also th
 
 When we are truly "thinking in objects," we are thinking in objects, thinking in metaobjects, and thinking in protocols. And for good measure, we are also thinking of when these things are "bound." And that's why JavaScript Spessore's mission is to explore objects, metaobjects, protocols, and to examine the implications of when these behaviours are bound.
 
-### J(oop)S[^plexer]
+### j(oop)s[^plexer]
 
 You may be thinking to yourself, "This is all very well, but it sounds like it is about object-oriented programming in general and not really about the specifics in JavaScript. Why JavaScript? Why not Lisp or Smalltalk or OCaml or some other language with more built-in facility for different object-oriented approaches?"
 

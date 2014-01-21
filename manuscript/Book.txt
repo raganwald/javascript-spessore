@@ -2,69 +2,81 @@ frontmatter:
 
   markdown/frontmatter/title.md
 
-    markdown/frontmatter/foreword.md
-
     markdown/frontmatter/lisp.md
 
     markdown/frontmatter/allonge.md
 
 mainmatter:
 
-  markdown/mainmatter/preamble/title.md
+  markdown/mainmatter/0.preamble/title.md
 
-    markdown/mainmatter/preamble/objects-and-references.md
 
-  markdown/mainmatter/mop/title.md
+  markdown/mainmatter/1.lungo/title.md
 
-    markdown/mainmatter/mop/introduction.md
+    markdown/mainmatter/1.lungo/1-pojos.md
 
-    markdown/mainmatter/mop/objects.md
+    markdown/mainmatter/1.lungo/3-objects/1.encapsulation.md
 
-    markdown/mainmatter/mop/metaobjects.md
+    markdown/mainmatter/1.lungo/3-objects/2.composition-and-extension.md
 
-    markdown/mainmatter/mop/protocols.md
+    markdown/mainmatter/1.lungo/3-objects/3.this.md
 
-    markdown/mainmatter/mop/summary.md
+    markdown/mainmatter/1.lungo/3-objects/4.context.md
 
-  markdown/mainmatter/objects/title.md
+    markdown/mainmatter/1.lungo/3-objects/6.extend-pojo.md
 
-    markdown/mainmatter/objects/recap.md
+    markdown/mainmatter/1.lungo/4-instances-and-classes/1a.simple.md
 
-    markdown/mainmatter/objects/immutable-properties.md
+    markdown/mainmatter/1.lungo/4-instances-and-classes/1a.queues.md
 
-    markdown/mainmatter/objects/copy-on-write.md
+    markdown/mainmatter/1.lungo/4-instances-and-classes/2.binding.md
 
-    markdown/mainmatter/objects/objects-and-functions.md
+    markdown/mainmatter/1.lungo/4-instances-and-classes/5.object-methods.md
 
-    markdown/mainmatter/objects/accessors.md
+    markdown/mainmatter/1.lungo/4-instances-and-classes/6.extends.md
 
-    markdown/mainmatter/objects/hiding.md
+    markdown/mainmatter/1.lungo/summary.md
 
-    markdown/mainmatter/objects/ones-and-twos.md
+
+  markdown/mainmatter/2.objects/title.md
+
+    markdown/mainmatter/2.objects/recap.md
+
+    markdown/mainmatter/2.objects/immutable-properties.md
+
+    markdown/mainmatter/2.objects/copy-on-write.md
+
+    markdown/mainmatter/2.objects/accessors.md
+
+    markdown/mainmatter/2.objects/hiding.md
+
+    markdown/mainmatter/2.objects/ones-and-twos.md
 
     markdown/mainmatter/pro-forma/objects.md
 
-  markdown/mainmatter/methods/title.md
 
-    markdown/mainmatter/methods/what.md
+  markdown/mainmatter/3.methods/title.md
 
-    markdown/mainmatter/methods/literal-vs-semantic.md
+    markdown/mainmatter/3.methods/what.md
 
-    markdown/mainmatter/methods/composite.md
+    markdown/mainmatter/3.methods/literal-vs-semantic.md
 
-    markdown/mainmatter/methods/method-objects.md
+    markdown/mainmatter/3.methods/composite.md
 
-  markdown/mainmatter/metaobjects/title.md
+    markdown/mainmatter/3.methods/metamethods.md
 
-    markdown/mainmatter/metaobjects/constructors.md
 
-    markdown/mainmatter/metaobjects/classes-and-prototypes.md
+  markdown/mainmatter/4.metaobjects/title.md
 
-    markdown/mainmatter/pro-forma/metaobjects.md
+    markdown/mainmatter/4.metaobjects/0.templates.md
 
-  markdown/mainmatter/protocols/title.md
+    markdown/mainmatter/4.metaobjects/1.prototypes.md
 
-    markdown/mainmatter/pro-forma/protocols.md
+    markdown/mainmatter/4.metaobjects/2.singletons.md
+
+    markdown/mainmatter/4.metaobjects/3.constructors.md
+
+    markdown/mainmatter/4.metaobjects/todo.md
 
 backmatter:
 

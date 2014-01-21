@@ -1,0 +1,238 @@
+## Meta-Methods
+
+### function helpers
+
+If functions are objects, and functions can have properties, then functions can have methods. We can give functions our own methods by assigning functions to their properties. We saw this previously when we decomposed an object's method into helper methods. Here's the same applied to a function:
+
+    function factorial (n) {
+      return factorial.helper(n, 1);
+    }
+
+    factorial.helper = function helper (n, accumulator) {
+      if (n === 0) {
+        return accumulator;
+      }
+      else return helper(n - 1, n * accumulator);
+    }
+
+Functions can have all sorts of properties. One of the more intriguing possibility is to maintain an array of functions:
+
+    function sequencer (arg) {
+      var that = this;
+
+      return sequencer._functions.reduce( function (acc, fn) {
+        return fn.call(that, acc);
+      }, arg);
+    }
+
+    Object.defineProperties(sequencer, {
+      _functions: {
+        enumerable: false,
+        writable: false,
+        value: []
+      }
+    });
+
+`sequencer` is an object-oriented way to implement the `pipeline` function from function-oriented libraries like [allong.es]. Instead of writing something like:
+
+    function square (n) { return n * n; }
+    function increment (n) { return n + 1; }
+
+    pipeline(square, increment)(6)
+      //=> 37
+
+[underscore]: http://underscorejs.org
+[allong.es]: http://allong.es
+
+We can write:
+
+    sequencer._functions.push(square);
+    sequencer._functions.push(increment);
+
+    sequencer(6)
+      //=> 37
+
+The functions contained within the `_functions` array are helper methods. They work they same way as is we'd written something like:
+
+    function squarePlusOne (arg) {
+      return squarePlusOne.increment(
+        squarePlusOne.square(arg)
+      );
+    }
+    squarePlusOne.increment = increment;
+    squarePlusOne.square = square;
+
+    squarePlusOne(6)
+      //=> 37
+
+The only difference is that they're dynamically looked up helper methods instead of statically wired in place by the body of the function. But they're still helper methods.
+
+### function methods
+
+The obvious problem with our approach is that we aren't using our method as an object in the ideal sense. Why should other entities manipulate its internal state? If this were any other kind of object, we'd expose methods handle messages from other entities.
+
+Let's try it:
+
+    Object.defineProperties(sequencer, {
+      push: {
+        enumerable: false,
+        writable: false,
+        value: function (fn) {
+          return this._functions.push(fn);
+        }
+      }
+    });
+
+Now we can manipulate our `sequencer` without touching its privates:
+
+    sequencer.push(square);
+    sequencer.push(increment);
+
+    sequencer(6)
+      //=> 37
+
+Is it a big deal to eliminate the `_functions` reference? Yes!
+
+1. This hides the implementation: Do we have an array of functions? Or maybe we are composing the functions with a combinator? Who knows?
+2. This prevents us manipulating internal state in unauthorized ways, such as calling `sequencer._functions.reverse()`
+
+`sequencer.push` is a proper method, a function that handles messages from other entities and in the course of handling the message, queries and/or updates the function's internal state.
+
+If we're going to treat functions like objects, we ought to give them methods.
+
+### aspect-oriented programming and meta-methods
+
+When an object has a function as one of its properties, that's a method. And we just established that functions can have methods. So... Can a method have methods?
+
+Most assuredly.
+
+Here's an example that implements a simplified form of [Aspect-Oriented Programming][aop]
+
+[aop]: https://en.wikipedia.org/wiki/Aspect-oriented_programming
+
+Consider a `businessObject` and a `businessObjectCollection`. Never mind what they are, that isn't important. We start with the idea that a `businessObject` can be `valid` or `invalid`, and there's a method for querying this:
+
+    var businessObject = Object.create(null, {
+      // ...
+      isValid: {
+        enumerable: false,
+        value: function () {
+          // ...
+        }
+      }
+    });
+
+Obviously, the `businessCollection` has methods for adding business objects and for finding business objects:
+
+    var businessCollection = Object.create(null, {
+      // ...
+      add: {
+        enumerable: false,
+        value: function (bobj) {
+          // ...
+        }
+      },
+      find: {
+        enumerable: false,
+        value: function (fn) {
+          // ...
+        }
+      }
+    });
+
+Our `businessCollection` is just a collection, it doesn't actually do anything to the business objects it holds.
+
+One day, we decide that it is an error if an invalid business object is placed in a business collection, and also an error if an invalid business object is returned when you call `businessCollection.find`. To "fail fast" in these situations, we decide that an exception should be thrown when this happens.
+
+Should we add some checking code to `businessCollection.add` and `businessCollection.find`? Yes, but we shouldn't modify the methods themselves. Since `businessCollection`'s single responsibility is storing objects, business rules about the state of the objects being stored should be placed in some other code.
+
+What we'd like to do is "advise" the `add` method with code that is to be run before it runs, and advise the `find` method with code that runs after it runs. If our methods had methods, we could write:
+
+    businessCollection.add.beforeAdvice(function (bobjProvided) {
+      if (!bobjProvided.isValid())
+        throw 'bad object provided to add';
+    });
+
+    businessCollection.find.afterAdvice(function (bobjReturned) {
+      if (bobjReturned && !bobjReturned.isValid())
+        throw 'bad object returned from find';
+    });
+
+As you can see, we've invented a little protocol. `.beforeAdvice` adds a function "before" a method, and `.afterAdvice` adds a function "after" a method. We'll need a function to make method objects out of the desired method functions:
+
+    function advisable (methodBody) {
+
+      function theMethod () {
+        var args = [].slice.call(arguments);
+
+        theMethod.befores.forEach( function (advice) {
+          advice.apply(this, args);
+        }, this);
+
+        var returnValue = theMethod.body.apply(this, arguments);
+
+        theMethod.afters.forEach( function (advice) {
+          advice.call(this, returnValue);
+        }, this);
+
+        return returnValue;
+      }
+
+      Object.defineProperties(theMethod, {
+        befores: {
+          enumerable: true,
+          writable: false,
+          value: []
+        },
+        body: {
+          enumerable: true,
+          writable: false,
+          value: body
+        },
+        afters: {
+          enumerable: true,
+          writable: false,
+          value: []
+        },
+        beforeAdvice: {
+          enumerable: false,
+          writable: false,
+          value: function (fn) {
+            this.befores.unshift(fn);
+            return this;
+          }
+        },
+        afterAdvice: {
+          enumerable: false,
+          writable: false,
+          value: function (fn) {
+            this.afters.push(fn);
+            return this;
+          }
+        }
+      });
+
+      return theMethod;
+    }
+
+Let's rewrite our `businessCollection` to use our `advisable` function:
+
+    var businessCollection = Object.create(null, {
+      // ...
+      add: {
+        enumerable: false,
+        value: advisable(function (bobj) {
+          // ...
+        })
+      },
+      find: {
+        enumerable: false,
+        value: advisable(function (fn) {
+          // ...
+        })
+      }
+    });
+
+And now, exactly as above, we can write `businessCollection.add.beforeAdvice` and `businessCollection.find.afterAdvice`, separating the responsibility for error checking from the responsibility for managing a collection of business objects.
+
+`beforeAdvice` and `afterAdvice` are methods of methods, or more simply, *meta-methods*.

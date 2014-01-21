@@ -1,3 +1,0 @@
-## Objects, Revisited
-
-*coming soon*
