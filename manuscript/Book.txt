@@ -40,8 +40,6 @@ mainmatter:
 
   markdown/mainmatter/2.objects/title.md
 
-    markdown/mainmatter/2.objects/recap.md
-
     markdown/mainmatter/2.objects/immutable-properties.md
 
     markdown/mainmatter/2.objects/copy-on-write.md
@@ -74,7 +72,7 @@ mainmatter:
 
     markdown/mainmatter/4.metaobjects/2.singletons.md
 
-    markdown/mainmatter/4.metaobjects/3.constructors.md
+    markdown/mainmatter/4.metaobjects/3.multiple.md
 
     markdown/mainmatter/4.metaobjects/todo.md
 
