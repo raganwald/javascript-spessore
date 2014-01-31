@@ -11,11 +11,11 @@ Previously, we showed how to use a prototype as a singletonMetaobject:
     var singletonMetaobject = {};
     var sam = Object.create(singletonMetaobject);
 
-    extendWithObjects(sam, {
+    extend(sam, {
       firstName: 'Sam',
       lastName: 'Lowry'
     });
-    extendWithObjects(singletonMetaobject, {
+    extend(singletonMetaobject, {
       fullName: function () {
         return this.firstName + " " + this.lastName;
       },
@@ -37,7 +37,7 @@ A protocol can hide this implementation detail behind a function:
     }
 
     var sam = object();
-    extendWithObjects(sam, {
+    extend(sam, {
       firstName: 'Sam',
       lastName: 'Lowry'
     });
