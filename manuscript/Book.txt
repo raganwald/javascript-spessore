@@ -66,11 +66,11 @@ mainmatter:
 
   markdown/mainmatter/4.metaobjects/title.md
 
-    markdown/mainmatter/4.metaobjects/0.templates.md
+    markdown/mainmatter/4.metaobjects/0.bumblethwaites.md
 
-    markdown/mainmatter/4.metaobjects/1.prototypes.md
+    markdown/mainmatter/4.metaobjects/1.templates.md
 
-    markdown/mainmatter/4.metaobjects/2.the-i-word.md
+    markdown/mainmatter/4.metaobjects/2.trees.md
 
     markdown/mainmatter/4.metaobjects/3.multiple.md
 

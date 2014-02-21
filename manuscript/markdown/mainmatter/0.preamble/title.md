@@ -8,7 +8,7 @@
 
 Welcome to [JavaScript Spessore][js]. This is a book about "Thinking in Objects," using JavaScript as the medium for discussion. The format of the book is as follows:
 
-[Caffé Lungo](#lungo) revisits the discussion of objects, prototypes, and simple inheritance from the book [JavaScript Allongé][ja]. This gives up a grounding in what JavaScript provides "out of the box" and how people typically apply it.
+[Caffé Lungo](#lungo) revisits the discussion of objects, prototypes, and delegation from the book [JavaScript Allongé][ja]. This gives up a grounding in what JavaScript provides "out of the box" and how people typically apply it.
 
 [The Object's The Thing](#object) examines JavaScript's objects and properties more closely, with an emphasis on using defined properties to control an object's interface.
 

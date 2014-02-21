@@ -16,9 +16,9 @@
 
 ### prototype chaining
 
-### single inheritance
+### simple delegation
 
-### mixins and multiple inheritance
+### mixins
 
 ### resolution: merge, override, and final
 
