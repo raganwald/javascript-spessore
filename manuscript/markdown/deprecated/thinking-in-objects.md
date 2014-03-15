@@ -2,6 +2,8 @@
 
 [JavaScript Allongé][ja] is a book about writing functions, combining functions, and decorating functions. It explains JavaScript's methods and classes in terms of functions. It had a single-minded focus on thinking in functions. But of course, there is more to programming than just thinking in functions, there is also "thinking in objects."
 
+[ja]: https://leanpub.com/javascript-allonge
+
 And that's where **JavaScript Spessore** comes in: To celebrate thinking in objects, starting with the basics, building upon them, and then exploring new ways to think about object-oriented programming.
 
 ### 0, 1, ∞

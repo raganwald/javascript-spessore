@@ -25,6 +25,8 @@ We call this a "naïve" object. It has state and behaviour, but it lacks divisio
 
 This lack of separation has two drawbacks. First, it intermingles properties that are part of the model domain (such as `firstName`) with methods (and possibly other properties, although none are shown here) that are part of the implementation domain. Second, when we needed to share common behaviour, we could have objects share common functions, but does it not scale: There's no sense of organization, no clustering of objects and functions that share a common responsibility.
 
-Metaobjects solve this problem by separating the domain-specific properties of objects from their behaviour and implementation-specific properties. In classic JavaScript, objects have *prototypes*, and the prototypes are the objects' metaobjects.
+Metaobjects solve the lack-of-separation problem by separating the domain-specific properties of objects from their behaviour and implementation-specific properties.
 
-The basic principle of the metaobject is that we separate the mechanics of behaviour from the domain properties of the base object. There are many ways to implement metaobjects, and we will explore some of these as a mechanism for exploring some of the ideas in Object-Oriented Programming.
+The basic principle of the metaobject is that we separate the mechanics of behaviour from the domain properties of the base object. This has immediate engineering benefits, and it's also the foundation for designing programs with formal classes, expectations, and delegation.
+
+There are many ways to implement metaobjects, and we will explore some of these as a mechanism for exploring some of the ideas in Object-Oriented Programming.

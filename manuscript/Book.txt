@@ -63,8 +63,14 @@ mainmatter:
 
     markdown/mainmatter/3.methods/metamethods.md
 
-  
-  markdown/mainmatter/4.bumblethwaites.md
+
+  markdown/mainmatter/4.bumblethwaites/title.md
+
+    markdown/mainmatter/4.bumblethwaites/1.family.md
+
+    markdown/mainmatter/4.bumblethwaites/2.formal-classes.md
+
+    markdown/mainmatter/4.bumblethwaites/3.the-i-word.md
 
 
   markdown/mainmatter/5.metaobjects/title.md
@@ -73,13 +79,22 @@ mainmatter:
 
     markdown/mainmatter/5.metaobjects/2.trees.md
 
-    markdown/mainmatter/5.metaobjects/3.multiple.md
+    markdown/mainmatter/5.metaobjects/4.singletons.md
 
-    markdown/mainmatter/5.metaobjects/4.ones-and-twos.md
+    markdown/mainmatter/5.metaobjects/5.ones-and-twos.md
 
-    markdown/mainmatter/5.metaobjects/5.singletons.md
 
-    markdown/mainmatter/5.metaobjects/todo.md
+  markdown/mainmatter/6.mops/title.md
+
+    markdown/mainmatter/6.mops/0.genesis.md
+
+    markdown/mainmatter/6.mops/1.classes-have-classes.md
+
+    markdown/mainmatter/6.mops/2.class-mixins.md
+
+    markdown/mainmatter/6.mops/3.well-actually.md
+
+    markdown/mainmatter/6.mops/todo.md
 
 backmatter:
 
