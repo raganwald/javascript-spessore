@@ -64,39 +64,42 @@ mainmatter:
     markdown/mainmatter/3.methods/metamethods.md
 
 
-  markdown/mainmatter/4.bumblethwaites/title.md
-
-    markdown/mainmatter/4.bumblethwaites/1.family.md
-
-    markdown/mainmatter/4.bumblethwaites/2.formal-classes.md
-
-    markdown/mainmatter/4.bumblethwaites/3.the-i-word.md
+  markdown/mainmatter/4.big-idea/title.md
 
 
-  markdown/mainmatter/5.metaobjects/title.md
+  markdown/mainmatter/5.bumblethwaites/title.md
 
-    markdown/mainmatter/5.metaobjects/1.templates.md
+    markdown/mainmatter/5.bumblethwaites/1.family.md
 
-    markdown/mainmatter/5.metaobjects/2.trees.md
+    markdown/mainmatter/5.bumblethwaites/2.formal-classes.md
 
-    markdown/mainmatter/5.metaobjects/4.singletons.md
-
-    markdown/mainmatter/5.metaobjects/5.ones-and-twos.md
+    markdown/mainmatter/5.bumblethwaites/3.the-i-word.md
 
 
-  markdown/mainmatter/6.mops/title.md
+  markdown/mainmatter/6.metaobjects/title.md
 
-    markdown/mainmatter/6.mops/0.genesis.md
+    markdown/mainmatter/6.metaobjects/1.templates.md
 
-    markdown/mainmatter/6.mops/1.classes-have-classes.md
+    markdown/mainmatter/6.metaobjects/2.trees.md
 
-    markdown/mainmatter/6.mops/2.class-mixins.md
+    markdown/mainmatter/6.metaobjects/4.singletons.md
 
-    markdown/mainmatter/6.mops/3.well-actually.md
+    markdown/mainmatter/6.metaobjects/5.ones-and-twos.md
 
-    markdown/mainmatter/6.mops/4.composing-method-behaviour.md
 
-    markdown/mainmatter/6.mops/todo.md
+  markdown/mainmatter/7.mops/title.md
+
+    markdown/mainmatter/7.mops/0.genesis.md
+
+    markdown/mainmatter/7.mops/1.classes-have-classes.md
+
+    markdown/mainmatter/7.mops/2.class-mixins.md
+
+    markdown/mainmatter/7.mops/3.well-actually.md
+
+    markdown/mainmatter/7.mops/4.composing-method-behaviour.md
+
+    markdown/mainmatter/7.mops/todo.md
 
 backmatter:
 
