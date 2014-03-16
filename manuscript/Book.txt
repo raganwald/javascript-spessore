@@ -94,6 +94,8 @@ mainmatter:
 
     markdown/mainmatter/6.mops/3.well-actually.md
 
+    markdown/mainmatter/6.mops/4.composing-method-behaviour.md
+
     markdown/mainmatter/6.mops/todo.md
 
 backmatter:
