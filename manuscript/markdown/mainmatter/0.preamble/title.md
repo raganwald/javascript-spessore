@@ -14,6 +14,9 @@ Welcome to [JavaScript Spessore][js]. This is a book about "Thinking in Objects,
 
 [Methods](#methods) expands on the notion of a method, looking at constructing composite methods, method objects, and meta-methods.
 
-[Metaobjects](#metaobjects) dives into the notion of metaobjects, objects that define the behaviour of other objects. It then examines the distinction between prototypes and other kinds of metaobjects. It then discusses *metaobject protocols*, the design of interfaces for manipulating metaobjects.
+In [The Big Idea](#big-idea), we will look at an oft-overlooked central idea of object-oriented programming: That *everything* can be encapsulated, not just entities we intuitively call "objects."
+
+After an interlude [At Home With The Bumblethwaites](#bumblethwaites), we'll look at [Metaobjects](#metaobjects). We'll dive into the notion of metaobjects, objects that define the behaviour of other objects.
 
 [ja]: https://leanpub.com/javascript-allonge
+[js]: https://leanpub.com/javascript-spessore

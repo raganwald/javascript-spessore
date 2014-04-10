@@ -1,0 +1,5 @@
+  markdown/mainmatter/6.metaobjects/title.md
+
+    markdown/mainmatter/6.metaobjects/1.mixins.md
+
+    markdown/mainmatter/6.metaobjects/2.delegation.md
