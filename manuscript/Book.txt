@@ -73,7 +73,7 @@ mainmatter:
 
     markdown/mainmatter/6.metaobjects/1.mixins.md
 
-    markdown/mainmatter/6.metaobjects/2.coupling.md
+    markdown/mainmatter/6.metaobjects/2.later-binding.md
 
 
   markdown/mainmatter/7.mops/title.md
