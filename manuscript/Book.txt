@@ -27,7 +27,7 @@ mainmatter:
 
     markdown/mainmatter/1.lungo/4-instances-and-classes/1a.simple.md
 
-    markdown/mainmatter/1.lungo/4-instances-and-classes/1a.queues.md
+    markdown/mainmatter/1.lungo/4-instances-and-classes/1b.queues.md
 
     markdown/mainmatter/1.lungo/4-instances-and-classes/2.binding.md
 
