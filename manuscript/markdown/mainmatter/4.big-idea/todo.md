@@ -1,5 +1,7 @@
 ## To Do
 
+### everything's a  first-class value
+
 ### domain entities
 
 ### commands, undo, and redo
