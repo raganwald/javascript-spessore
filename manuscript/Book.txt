@@ -77,6 +77,8 @@ mainmatter:
 
     markdown/mainmatter/6.metaobjects/3.policies.md
 
+    markdown/mainmatter/6.metaobjects/mazzer-mini.md
+
     markdown/mainmatter/6.metaobjects/4.prototypes.md
 
 

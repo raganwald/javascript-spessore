@@ -1,0 +1,1 @@
+[![Mazzer Mini Grinder](images/mazzer-mini.jpg)](https://www.flickr.com/photos/102043207@N06/11232144966) [Some rights reserved](https://creativecommons.org/licenses/by/2.0/)
