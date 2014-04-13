@@ -75,6 +75,8 @@ mainmatter:
 
     markdown/mainmatter/6.metaobjects/2.later-binding.md
 
+    markdown/mainmatter/6.metaobjects/3.policies.md
+
 
   markdown/mainmatter/7.mops/title.md
 

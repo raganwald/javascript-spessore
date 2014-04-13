@@ -100,7 +100,7 @@ Is it a big deal to eliminate the `_functions` reference? Yes!
 
 If we're going to treat functions like objects, we ought to give them methods.
 
-### aspect-oriented programming and meta-methods
+### aspect-oriented programming and meta-methods {#aopmm}
 
 When an object has a function as one of its properties, that's a method. And we just established that functions can have methods. So... Can a method have methods?
 
