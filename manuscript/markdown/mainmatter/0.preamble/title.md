@@ -1,7 +1,5 @@
 # Preamble
 
-[Dr. Alan Kay on the expression "OOP"](images/oop.png)
-
 ![Normalized Pump Pressure Reading](images/nalundgaard.jpg)[^nalundgaard]
 
 [^nalundgaard]: [Normalized Pump Pressure Reading](http://www.flickr.com/photos/nalundgaard/3163040635) (c) 2009 Nicholas Lundgaard, [some rights reserved](http://creativecommons.org/licenses/by-sa/2.0/deed.en)
@@ -16,7 +14,7 @@ Welcome to [JavaScript Spessore][js]. This is a book about "Thinking in Objects,
 
 In [The Big Idea](#big-idea), we will look at an oft-overlooked central idea of object-oriented programming: That *everything* can be encapsulated, not just entities we intuitively call "objects."
 
-After an interlude [At Home With The Bumblethwaites](#bumblethwaites), we'll look at [Metaobjects](#metaobjects). We'll dive into the notion of metaobjects, objects that define the behaviour of other objects.
+We'll dive into the notion of [Metaobjects](#metaobjects), objects that define the behaviour of other objects.
 
 [ja]: https://leanpub.com/javascript-allonge
 [js]: https://leanpub.com/javascript-spessore

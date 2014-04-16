@@ -13,6 +13,8 @@ mainmatter:
 
   markdown/mainmatter/1.lungo/title.md
 
+    markdown/mainmatter/1.lungo/0-introduction.md
+
     markdown/mainmatter/1.lungo/1-pojos.md
 
     markdown/mainmatter/1.lungo/3-objects/1.encapsulation.md
