@@ -1,6 +1,6 @@
 ## To Do
 
-### everything's a  first-class value
+### everything's a first-class value
 
 ### domain entities
 
