@@ -81,6 +81,10 @@ mainmatter:
 
     markdown/mainmatter/6.metaobjects/4.prototypes.md
 
+    markdown/mainmatter/6.metaobjects/5.singletons.md
+
+    markdown/mainmatter/6.metaobjects/6.shared-prototypes.md
+
 
   markdown/mainmatter/7.mops/title.md
 
