@@ -1,6 +1,8 @@
 # Metaobject Protocols
 
-(insert image here)
+![Mazza Mini Grinder](images/7/mazza-mini.jpg)[^mazzamini]
+
+[^mazzamini]: [Mazza Mini Grinder](https://www.flickr.com/photos/102043207@N06/11232140886) (c) 2013 CoffeeDude55, [some rights reserved](https://creativecommons.org/licenses/by/2.0/)
 
 As we discussed earlier, the idea behind metaobject-2s is to organize the way we program our objects and classes using the same tools we use to program our domain objects.
 
