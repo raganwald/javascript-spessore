@@ -62,7 +62,7 @@ Of course, this amount can still be mutated, but we are now mediating access wit
     mutableAmount.getDollars()
       //=> 0
 
-Immutability is easy, just leave out the "getters:"
+Immutability is easy, just leave out the "setters:"
 
     var rentAmount = (function () {
       var _dollars = 420;
