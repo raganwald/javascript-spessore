@@ -86,19 +86,24 @@ mainmatter:
     markdown/mainmatter/6.metaobjects/6.shared-prototypes.md
 
 
-  markdown/mainmatter/7.mops/title.md
+  markdown/mainmatter/7.encapsulation/title.md
 
-    markdown/mainmatter/7.mops/0.genesis.md
+    markdown/mainmatter/7.encapsulation/0.problem.md
 
-    markdown/mainmatter/7.mops/1.classes-have-classes.md
 
-    markdown/mainmatter/7.mops/2.class-mixins.md
+  markdown/mainmatter/8.mops/title.md
 
-    markdown/mainmatter/7.mops/3.well-actually.md
+    markdown/mainmatter/8.mops/0.genesis.md
 
-    markdown/mainmatter/7.mops/4.composing-method-behaviour.md
+    markdown/mainmatter/8.mops/1.classes-have-classes.md
 
-    markdown/mainmatter/7.mops/todo.md
+    markdown/mainmatter/8.mops/2.class-mixins.md
+
+    markdown/mainmatter/8.mops/3.well-actually.md
+
+    markdown/mainmatter/8.mops/4.composing-method-behaviour.md
+
+    markdown/mainmatter/8.mops/todo.md
 
 backmatter:
 

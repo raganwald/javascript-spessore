@@ -1,6 +1,6 @@
 # Metaobject Protocols
 
-![Mazza Mini Grinder](images/7/mazza-mini.jpg)[^mazzamini]
+![Mazza Mini Grinder](images/8/mazza-mini.jpg)[^mazzamini]
 
 [^mazzamini]: [Mazza Mini Grinder](https://www.flickr.com/photos/102043207@N06/11232140886) (c) 2013 CoffeeDude55, [some rights reserved](https://creativecommons.org/licenses/by/2.0/)
 
