@@ -87,7 +87,7 @@ Objects delegate behaviour to their immediate prototype, and that delegates beha
 
 Without getting into the question of semantics, formal classes, and ontologies, this "prototype chain" pattern has a serious problem.
 
-### the 8.mops problem
+### the fragile base class problem
 
 As the application grows, prototypes are created and chains rearranged, until you might end up with:
 

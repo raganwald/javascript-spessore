@@ -90,6 +90,8 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/0.problem.md
 
+    markdown/mainmatter/7.encapsulation/1.basic.md
+
 
   markdown/mainmatter/8.mops/title.md
 
