@@ -92,6 +92,10 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/1.basic.md
 
+    markdown/mainmatter/7.encapsulation/2.metaobjects.md
+
+    markdown/mainmatter/7.encapsulation/3.roles.md
+
 
   markdown/mainmatter/8.mops/title.md
 
