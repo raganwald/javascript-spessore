@@ -68,8 +68,6 @@ mainmatter:
 
   markdown/mainmatter/4.big-idea/title.md
 
-    markdown/mainmatter/4.big-idea/todo.md
-
 
   markdown/mainmatter/6.metaobjects/title.md
 

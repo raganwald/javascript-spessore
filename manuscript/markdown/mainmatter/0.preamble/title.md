@@ -4,6 +4,8 @@
 
 [^nalundgaard]: [Normalized Pump Pressure Reading](http://www.flickr.com/photos/nalundgaard/3163040635) (c) 2009 Nicholas Lundgaard, [some rights reserved](http://creativecommons.org/licenses/by-sa/2.0/deed.en)
 
+{pagebreak}
+
 Welcome to [JavaScript Spessore][js]. This is a book about "Thinking in Objects," using JavaScript as the medium for discussion. The format of the book is as follows:
 
 [Caffé Lungo](#lungo) revisits the discussion of objects, prototypes, and delegation from the book [JavaScript Allongé][ja]. This gives up a grounding in what JavaScript provides "out of the box" and how people typically apply it.
