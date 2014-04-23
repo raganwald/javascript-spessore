@@ -50,6 +50,8 @@ mainmatter:
 
     markdown/mainmatter/2.objects/hiding.md
 
+    markdown/mainmatter/2.objects/proxies.md
+
     markdown/mainmatter/2.objects/ones-and-twos.md
 
     markdown/mainmatter/pro-forma/objects.md
@@ -88,7 +90,7 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/0.problem.md
 
-    markdown/mainmatter/7.encapsulation/1.basic.md
+    markdown/mainmatter/7.encapsulation/1.proxies-again.md
 
     markdown/mainmatter/7.encapsulation/2.metaobjects.md
 
