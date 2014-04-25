@@ -70,6 +70,8 @@ mainmatter:
 
   markdown/mainmatter/4.big-idea/title.md
 
+    markdown/mainmatter/6.metaobjects/0.coglan.md
+
 
   markdown/mainmatter/6.metaobjects/title.md
 
