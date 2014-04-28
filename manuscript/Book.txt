@@ -11,6 +11,13 @@ mainmatter:
   markdown/mainmatter/0.preamble/title.md
 
 
+  markdown/mainmatter/the-big-idea/title.md
+
+    markdown/mainmatter/the-big-idea/1.functions-and-objects.md
+
+    markdown/mainmatter/the-big-idea/1.javascript-algebras.md
+
+
   markdown/mainmatter/1.lungo/title.md
 
     markdown/mainmatter/1.lungo/0-introduction.md
@@ -66,11 +73,6 @@ mainmatter:
     markdown/mainmatter/3.methods/composite.md
 
     markdown/mainmatter/3.methods/metamethods.md
-
-
-  markdown/mainmatter/4.big-idea/title.md
-
-    markdown/mainmatter/6.metaobjects/0.coglan.md
 
 
   markdown/mainmatter/6.metaobjects/title.md
