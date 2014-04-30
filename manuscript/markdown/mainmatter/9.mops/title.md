@@ -1,8 +1,8 @@
 # Metaobject Protocols
 
-![Mazza Mini Grinder](images/8/mazza-mini.jpg)[^mazzamini]
+[![Cime Espresso Machine Factory](images/9/cime-factory.jpg)](https://www.flickr.com/photos/baristahoon/8664290273)[^cime]
 
-[^mazzamini]: [Mazza Mini Grinder](https://www.flickr.com/photos/102043207@N06/11232140886) (c) 2013 CoffeeDude55, [some rights reserved](https://creativecommons.org/licenses/by/2.0/)
+[^cime]: Cime Espresso Machine Factory, Copyright 2012, Jong Hoon Lee [Some Rights Reserved](https://creativecommons.org/licenses/by-sa/2.0/)
 
 {pagebreak}
 

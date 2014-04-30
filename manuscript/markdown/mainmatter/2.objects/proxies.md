@@ -57,19 +57,21 @@ stackProxy
 Of course, we can automate the writing of functions:
 
 ~~~~~~~~
-function proxy(baseObject) {
-  var proxyObject = Object.create(null);
-
-  Object.keys(baseObject).forEach(function (methodName) {
-    if (typeof(baseObject[methodName]) === 'function') {
-      proxyObject[methodName] = function () {
-        return this === proxyObject
-               ? baseObject[methodName].apply(baseObject, arguments)
-               : baseObject[methodName].apply(this, arguments)
-      }
+function proxy (baseObject) {
+  var proxyObject = Object.create(null),
+      methodName;
+  for (methodName in baseObject) {
+    if (typeof(baseObject[methodName]) ===  'function') {
+      (function (methodName) {
+        proxyObject[methodName] = function () {
+          var result = baseObject[methodName].apply(baseObject, arguments);
+          return (result === baseObject)
+                 ? proxyObject
+                 : result;
+        }
+      })(methodName);
     }
-  });
-
+  }
   return proxyObject;
 }
 
@@ -80,4 +82,4 @@ stack.pop()
   //=> 'auto'
 ~~~~~~~~
 
-A proxy isn't the original object, but it is often more than good enough. In some designs, the base objects are only ever manipulated through proxies.
+A proxy isn't the original object, but it is often more than good enough. In some designs, the base objects are only ever manipulated through proxies. We create proxies with a transformation function. Later on, we'll see more sophisticated transformation functions that can create partial proxies (proxies for only some of the base object's behaviours), as well as proxies that control the creation of private state.
