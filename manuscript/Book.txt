@@ -107,7 +107,9 @@ mainmatter:
 
     markdown/mainmatter/8.composing-metaobjects/1.encapsulation.md
 
-    markdown/mainmatter/8.composing-metaobjects/2.composition.md
+    markdown/mainmatter/8.composing-metaobjects/2.composing-prototypes.md
+
+    markdown/mainmatter/8.composing-metaobjects/2.compose-behaviours.md
 
 
   markdown/mainmatter/9.mops/title.md
