@@ -98,7 +98,7 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/2.metaobjects.md
 
-    markdown/mainmatter/7.encapsulation/3.roles.md
+    markdown/mainmatter/7.encapsulation/3.encapsulate.md
 
 
   markdown/mainmatter/8.composing-metaobjects/title.md

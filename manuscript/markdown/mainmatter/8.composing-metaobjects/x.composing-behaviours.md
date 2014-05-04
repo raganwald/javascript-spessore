@@ -83,14 +83,8 @@ function extend () {
   return consumer;
 };
 
-function partialProxy (encapsulate, methods, mutableProperties) {
+function partialProxy (encapsulate, methods) {
   var proxyObject = Object.create(null);
-
-  if (mutableProperties) {
-    mutableProperties.forEach(function (privatePropertyName) {
-      proxyObject[privatePropertyName] = null;
-    });
-  }
 
   methods.forEach(function (methodName) {
     proxyObject[methodName] = function () {
@@ -100,8 +94,6 @@ function partialProxy (encapsulate, methods, mutableProperties) {
              : result;
     }
   });
-
-  Object.preventExtensions(proxyObject);
 
   return proxyObject;
 }
