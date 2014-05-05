@@ -12,6 +12,8 @@ mainmatter:
 
   markdown/mainmatter/1.lungo/title.md
 
+    markdown/mainmatter/1.lungo/0-introduction.md
+
     markdown/mainmatter/1.lungo/1-pojos.md
 
     markdown/mainmatter/1.lungo/3-objects/1.encapsulation.md
@@ -37,30 +39,28 @@ mainmatter:
     markdown/mainmatter/1.lungo/summary.md
 
 
-  markdown/mainmatter/2.objects/title.md
+  markdown/mainmatter/7.encapsulation/title.md
 
-    markdown/mainmatter/2.objects/immutable-properties.md
+    markdown/mainmatter/7.encapsulation/0.problem.md
 
-    markdown/mainmatter/2.objects/copy-on-write.md
+    markdown/mainmatter/7.encapsulation/1.proxies-again.md
 
-    markdown/mainmatter/2.objects/accessors.md
+    markdown/mainmatter/7.encapsulation/2.metaobjects.md
 
-    markdown/mainmatter/2.objects/hiding.md
-
-    markdown/mainmatter/2.objects/ones-and-twos.md
-
-    markdown/mainmatter/pro-forma/objects.md
+    markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
 
 
-  markdown/mainmatter/3.methods/title.md
+  markdown/mainmatter/8.composing-metaobjects/title.md
 
-    markdown/mainmatter/3.methods/what.md
+    markdown/mainmatter/8.composing-metaobjects/0.introduction.md
 
-    markdown/mainmatter/3.methods/literal-vs-semantic.md
+    markdown/mainmatter/8.composing-metaobjects/1.partial-proxies.md
 
-    markdown/mainmatter/3.methods/composite.md
+    markdown/mainmatter/8.composing-metaobjects/2.safe-composition.md
 
-    markdown/mainmatter/3.methods/metamethods.md
+    markdown/mainmatter/8.composing-metaobjects/3.prototypes.md
+
+    markdown/mainmatter/8.composing-metaobjects/4.methods.md
 
 
 backmatter:
