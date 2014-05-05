@@ -1,5 +1,7 @@
 ## Proxies {#proxies}
 
+*TODO: Rewrite this as a section about encapsulation*
+
 When we discuss [Metaobjects](#metaobjects), we'll look at a technique called [forwarding](#forwarding), wherein one object's functions call the exact same function in another object. In the simple case where the only methods an object has are those that it forwards to another object, we call that object a [proxy] for the other object, which we call the *base object*, because it looks and behaves like the base object.
 
 [proxy]: https://en.wikipedia.org/wiki/Proxy_pattern
@@ -53,6 +55,8 @@ stackProxy
       pop: [Function],
       isEmpty: [Function] }
 ~~~~~~~~
+
+
 
 Of course, we can automate the writing of functions:
 

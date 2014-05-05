@@ -68,11 +68,15 @@ mainmatter:
 
     markdown/mainmatter/3.methods/what.md
 
+    markdown/mainmatter/3.methods/this.md
+
     markdown/mainmatter/3.methods/literal-vs-semantic.md
 
     markdown/mainmatter/3.methods/composite.md
 
     markdown/mainmatter/3.methods/metamethods.md
+
+    markdown/mainmatter/3.methods/pattern-matching.md
 
 
   markdown/mainmatter/6.metaobjects/title.md
@@ -98,7 +102,7 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/2.metaobjects.md
 
-    markdown/mainmatter/7.encapsulation/3.roles.md
+    markdown/mainmatter/7.encapsulation/3.encapsulate.md
 
 
   markdown/mainmatter/8.composing-metaobjects/title.md
@@ -107,7 +111,9 @@ mainmatter:
 
     markdown/mainmatter/8.composing-metaobjects/1.encapsulation.md
 
-    markdown/mainmatter/8.composing-metaobjects/2.composition.md
+    markdown/mainmatter/8.composing-metaobjects/2.composing-prototypes.md
+
+    markdown/mainmatter/8.composing-metaobjects/2.compose-behaviours.md
 
 
   markdown/mainmatter/9.mops/title.md

@@ -166,4 +166,29 @@ Given this, we can construct:
     methods(dictionary)
       //=> ['length']
 
-We will need to be strict about making all of your methods non-enumerable to use this function. We'll also have to rethink our approach to listing methods when we start working with metaobject,s the topic of the next chapter.
+We would need to be strict about making all of your methods non-enumerable to use this function.
+
+### prototypes and object-2s
+
+Another way to create an object-2 is to use a prototype. We'll talk about prototypes in more detail later, but we could easily write:
+
+~~~~~~~~
+var Dictionary = {
+  length: function () {
+    return Object.keys(this).length;
+  }
+}
+
+var dictionary = Object.create(Dictionary);
+
+dictionary.abstraction = "an abstract or general idea or term";
+dictionary.encapsulate = "to place in or as if in a capsule";
+dictionary.object      = "anything that is visible or tangible and is relatively stable in form";
+
+dictionary.length()
+  //=> 3
+~~~~~~~~
+
+Prototypes are the way JavaScript natively handles delegation: Our `dictionary` object doesn't have a property for `length`, but it *delegates* handling `length` to `Dictionary`. It does have properties for  `abstraction`, `encapsulate`, and `object`, so when you write `dictionary.abstraction`, you get `"an abstract or general idea or term"` back.
+
+Prototypes are JavaScript's way of making Object-2s. They happen to be *Metaobject-1s*, but that is a story we will investigate later.
