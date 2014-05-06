@@ -6,4 +6,4 @@
 
 {pagebreak}
 
-> *In computer science, a metaobject is an object that manipulates, creates, describes, or implements other objects (including itself). The object that the metaobject is about is called the base object. Some information that a metaobject might store is the base object's type, interface, class, methods, attributes, parse tree, etc.*--[Wikipedia](https://en.wikipedia.org/wiki/Metaobject)
+I> In computer science, a metaobject is an object that manipulates, creates, describes, or implements other objects (including itself). The object that the metaobject is about is called the base object. Some information that a metaobject might store is the base object's type, interface, class, methods, attributes, parse tree, etc.--[Wikipedia](https://en.wikipedia.org/wiki/Metaobject)

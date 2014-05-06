@@ -5,8 +5,9 @@
 [^erickson]: [Londinium 1 Lever Espresso Machine](http://www.flickr.com/photos/44701100@N05/10224668065) (c) 2013 Alejandro Erickson, [some rights reserved](http://creativecommons.org/licenses/by/2.0/deed.en)
 
 {pagebreak}
-
-> A Smalltalk object can do exactly three things: Hold state (references to other objects), receive a message from itself or another object, and in the course of processing a message, send messages to itself or another object.--[Smalltalk on Wikipedia][smalltalk]
+I> A Smalltalk object can do exactly three things: Hold state (references to other objects), receive a message from itself or another object, and in the course of processing a message, send messages to itself or another object.
+I>
+I>--[Smalltalk on Wikipedia][smalltalk]
 
 [smalltalk]: https://en.wikipedia.org/wiki/Smalltalk
 

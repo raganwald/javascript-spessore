@@ -4,7 +4,7 @@ Teaching Lisp by implementing Lisp is a long-standing tradition. We read book af
 
 [LiSP]: http://www.amazon.com/gp/product/B00AKE1U6O/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00AKE1U6O&linkCode=as2&tag=raganwald001-20
 
-**LiSP**'s approach is to introduce a feature of Lisp, then develop an implementation. The book covers [\Lisp-1 vs. Lisp-2[^onevstwo], then discusses how to implement namespaces, building a simple Lisp-1 and a simple Lisp-2. Another chapter discusses scoping, and again you build interpreters for dynamic and block scoped Lisps.
+**LiSP**'s approach is to introduce a feature of Lisp, then develop an implementation. The book covers Lisp-1 vs. Lisp-2[^onevstwo], then discusses how to implement namespaces, building a simple Lisp-1 and a simple Lisp-2. Another chapter discusses scoping, and again you build interpreters for dynamic and block scoped Lisps.
 
 [^onevstwo]: A "Lisp-1" has a single namespace for both functions and other values. A "Lisp-2" has separate namespaces for functions and other values. To the extend that JavaScript resembles a Lisp, it resembles a Lisp-1. See [The function namespace](http://en.wikipedia.org/wiki/Common_Lisp#The_function_namespace).
 

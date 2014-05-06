@@ -6,6 +6,6 @@
 
 {pagebreak}
 
-> In object-oriented programming, a method (or member function) is a subroutine (or procedure or function) associated with an object, and which has access to its data, its member variables.—[Wikipedia][methods]
+I> In object-oriented programming, a method (or member function) is a subroutine (or procedure or function) associated with an object, and which has access to its data, its member variables.—[Wikipedia][methods]
 
 [methods]: https://en.wikipedia.org/wiki/Method_(computer_programming)
