@@ -8,14 +8,14 @@ frontmatter:
 
 mainmatter:
 
-  markdown/mainmatter/0.preamble/title.md
 
+  markdown/mainmatter/0.the-big-idea/title.md
 
-  markdown/mainmatter/the-big-idea/title.md
+    markdown/mainmatter/0.the-big-idea/1.functions-and-objects.md
 
-    markdown/mainmatter/the-big-idea/1.functions-and-objects.md
+    markdown/mainmatter/0.the-big-idea/2.javascript-algebras.md
 
-    markdown/mainmatter/the-big-idea/1.javascript-algebras.md
+    markdown/mainmatter/0.the-big-idea/3.composition.md
 
 
   markdown/mainmatter/1.lungo/title.md
