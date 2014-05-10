@@ -32,8 +32,6 @@ mainmatter:
 
     markdown/mainmatter/2.objects/ones-and-twos.md
 
-    markdown/mainmatter/pro-forma/objects.md
-
 
   markdown/mainmatter/3.methods/title.md
 
