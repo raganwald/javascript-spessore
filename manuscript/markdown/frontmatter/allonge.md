@@ -1,6 +1,6 @@
 ## JavaScript Allongé and allong.es
 
-[JavaScript Spessore][js] is written for the reader who has read [JavaScript Allongé][ja] or has equivalent experience with JavaScript, especially as it pertains to functions, closures, and prototypes. JavaScript Allongé is well-regarded amongst programmers:
+[JavaScript Spessore][js] is written for the reader who has read [JavaScript Allongé][ja] or has equivalent experience with JavaScript, especially as it pertains to functions, closures, and prototypes.
 
 > "This is a must-read for any developer who wants to know Javascript better... Reg has a way of explaining things in a way that connected the dots for me. This is probably the only programming book I've re-read cover to cover a dozen times or more."--etrinh
 
