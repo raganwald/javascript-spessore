@@ -20,6 +20,8 @@ mainmatter:
 
   markdown/mainmatter/2.objects/title.md
 
+    markdown/mainmatter/2.objects/introducton.md
+
     markdown/mainmatter/2.objects/immutable-properties.md
 
     markdown/mainmatter/2.objects/copy-on-write.md
@@ -49,6 +51,8 @@ mainmatter:
 
 
   markdown/mainmatter/6.metaobjects/title.md
+
+    markdown/mainmatter/6.metaobjects/0.why.md
 
     markdown/mainmatter/6.metaobjects/1.mixins.md
 

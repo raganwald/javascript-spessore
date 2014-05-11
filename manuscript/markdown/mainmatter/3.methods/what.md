@@ -1,5 +1,11 @@
 ## What is a Method?
 
+I> In object-oriented programming, a method (or member function) is a subroutine (or procedure or function) associated with an object, and which has access to its data, its member variables.
+I>
+I> --[Wikipedia][methods]
+
+[methods]: https://en.wikipedia.org/wiki/Method_(computer_programming)
+
 As an abstraction, an object is an independent entity that maintains internal state and that responds to messages by reporting its internal state and/or making changes to its internal state. In the course of handling a message, an object may send messages to other objects and receive replies from them.
 
 A "method" is an another idea that is related to, but not the same as, handling a message. A method is a function that encapsulates an object's behaviour. Methods are invoked by a calling entity much as a function is invoked by some code.
@@ -31,4 +37,3 @@ When we write `dictionary.descriptor()`, we're *invoking or calling the descript
 In describing objects, we refer to objects as encapsulating their internal state. The ideal is that objects **never** directly access or manipulate each other's state. Instead, objects interact with each other solely through methods.
 
 There are many things that methods can do. Two of the most obvious are to *query* an object's internal state and to *update* its state. Methods that have no purpose other than to report internal state are called queries, while methods that have no purpose other than to update an object's internal state are called updates.
-
