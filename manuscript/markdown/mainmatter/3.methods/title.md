@@ -6,4 +6,6 @@
 
 {pagebreak}
 
+A> ### In This Chapter
+A>
 A> In this chapter, we'll look at methods in more detail, including *metamethods*, methods with programmable semantics. Once again, our goal will be to refresh our understanding and to prepare us for later chapters that implement semantics involving behaviour, such as mixins.

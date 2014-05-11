@@ -6,4 +6,6 @@
 
 {pagebreak}
 
+A> ### In This Chapter
+A>
 A> In this chapter, we'll review JavaScript's objects, paying special attention to objects that have methods and state. Our goal will be to refresh our understanding of what we already know, we won't be trying to develop brand-new programming approaches.
