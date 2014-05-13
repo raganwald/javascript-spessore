@@ -8,4 +8,4 @@
 
 A> ### In This Chapter
 A>
-A> In this chapter, we'll explore making metaobjects that encapsulate their own metaprogramming behaviour. In other words, we'll programm OO, using OO.
+A> In this chapter, we'll explore making metaobjects that encapsulate their own metaprogramming behaviour. In other words, we'll program OO, using OO.
