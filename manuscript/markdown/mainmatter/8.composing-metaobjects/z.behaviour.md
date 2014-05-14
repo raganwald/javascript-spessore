@@ -1,98 +1,58 @@
-## Safely Extending Prototypes
-
-Although we don't emphasize it, prototypes can be chained. What happens when we attempt to mix in behaviour that conflicts with a super-prototype?
+## Composable Behaviour in JavaScript
 
 ~~~~~~~~
-var SingsSongs = encapsulate({
-  initialize: function () {
-    this._songs = [];
-    return this;
+var __slice = [].slice;
+
+function extend () {
+  var consumer = arguments[0],
+      providers = __slice.call(arguments, 1),
+      key,
+      i,
+      provider;
+
+  for (i = 0; i < providers.length; ++i) {
+    provider = providers[i];
+    for (key in provider) {
+      if (Object.prototype.hasOwnProperty.call(provider, key)) {
+        consumer[key] = provider[key];
+      };
+    };
+  };
+  return consumer;
+};
+
+var policies = {
+  overwrite: function overwrite (fn1, fn2) {
+    return fn1;
   },
-  addSong: function (name) {
-    this._songs.push(name);
-    return this;
+  discard: function discard (fn1, fn2) {
+    return fn2;
   },
-  songs: function () {
-    return this._songs;
+  before: function before (fn1, fn2) {
+    return function () {
+      var fn1value = fn1.apply(this, arguments),
+          fn2value = fn2.apply(this, arguments);
+      return fn2value !== void 0
+             ? fn2value
+             : fn1value;
+    }
+  },
+  after: function after (fn1, fn2) {
+    return function () {
+      var fn2value = fn2.apply(this, arguments),
+          fn1value = fn1.apply(this, arguments);
+      return fn2value !== void 0
+             ? fn2value
+             : fn1value;
+    }
+  },
+  around: function around (fn1, fn2) {
+    return function () {
+      var argArray = [fn2.bind(this)].concat(__slice.call(arguments, 0));
+      return fn1.apply(this, argArray);
+    }
   }
-});
-
-var HasAwards = encapsulate({
-  initialize: function () {
-    this._awards = [];
-    return this;
-  },
-  addAward: function (name) {
-    this._awards.push(name);
-    return this;
-  },
-  awards: function () {
-    return this._awards;
-  }
-});
-
-var AwardWinningSongwriter = composeBehaviours(
-  SingsSongs,
-  resolve(HasAwards, {initialize: 'after'})
-);
-
-var HasChildren = encapsulate({
-  initialize: function () {
-    this._children = [];
-    return this;
-  },
-  addChild: function (name) {
-    this._children.push(name);
-    return this;
-  },
-  children: function () {
-    return this._children;
-  }
-});
-
-var SingsToChildren = Object.create(AwardWinningSongwriter);
-extend(SingsToChildren, HasChildren);
-
-var sharon = Object.create(SingsToChildren);
-sharon.initialize();
-
-sharon.addAward("Grammy for Best Children's Album")
-  //=> TypeError: Cannot call method 'push' of undefined
-~~~~~~~~
-
-As we might expect, `HasChildren.initialize` is being copied into `SingsToChildren`, and that's what gets evaluated when we call `sharon.initialize()`. our `composeBehaviour` function never has a chance to resolve it. Let's try:
-
-~~~~~~~~
-var SingsToChildren = composeBehaviours(
-  Object.create(AwardWinningSongwriter),
-  resolve(HasChildren, {initialize: 'after'})
-);
-
-var sharon = Object.create(SingsToChildren);
-sharon.initialize();
-
-sharon.addAward("Grammy for Best Children's Album");
-sharon.awards()
-  //=> [ 'Grammy for Best Children\'s Album' ]
-~~~~~~~~
-
-Looking good. But then:
-
-~~~~~~~~
-AwardWinningSongwriter.isPrototypeOf(sharon)
-  //=> false
-~~~~~~~~
-
-Our `composeBehaviour` function ignored the prototype and "flattened" all of the behaviour into an object that delegates to `Object.prototype`. This is not what we expect. So we'll rewrite it to respect prototypes.
-
-Now, we can't compose multiple prototypes, JavaScript only allows a single prototype. So we'll use the prototype of the first behaviour, and then check that the rest are compatible with it.
-
-~~~~~~~~
-//////////////////////////////////////////////////////////////////////
-//
-// repeating ourself: remove before publication
-//
-//////////////////////////////////////////////////////////////////////
+};
 
 var __slice = [].slice;
 
@@ -251,61 +211,6 @@ function resolve(behaviour, policySpecification) {
   return result;
 }
 
-//////////////////////////////////////////////////////////////////////
-
-var SingsSongs = encapsulate({
-  initialize: function () {
-    this._songs = [];
-    return this;
-  },
-  addSong: function (name) {
-    this._songs.push(name);
-    return this;
-  },
-  songs: function () {
-    return this._songs;
-  }
-});
-
-var HasAwards = encapsulate({
-  initialize: function () {
-    this._awards = [];
-    return this;
-  },
-  addAward: function (name) {
-    this._awards.push(name);
-    return this;
-  },
-  awards: function () {
-    return this._awards;
-  }
-});
-
-var AwardWinningSongwriter = composeBehaviours(
-  SingsSongs,
-  resolve(HasAwards, {initialize: 'after'})
-);
-
-var HasChildren = encapsulate({
-  initialize: function () {
-    this._children = [];
-    return this;
-  },
-  addChild: function (name) {
-    this._children.push(name);
-    return this;
-  },
-  children: function () {
-    return this._children;
-  }
-});
-
-//////////////////////////////////////////////////////////////////////
-
-// if a 'is-compatible-wth-b', it means we can happily inherit
-// from a. a is the same as b, or a specialization of b. there is some
-// extra stuff to handle `null`:
-
 function allEncompasses (prototype1, prototype2) {
   if (prototype1 === null) return prototype2 === null;
   if (prototype2 === null) return true;
@@ -365,24 +270,4 @@ function composeBehaviours () {
     return composed;
   });
 }
-
-var SingsToChildren = composeBehaviours(
-  Object.create(AwardWinningSongwriter),
-  resolve(HasChildren, {initialize: 'after'})
-);
-
-var sharon = Object.create(SingsToChildren).initialize();
-
-sharon.addChild('Lois')
-sharon.addChild('Bram')
-sharon.addSong('There Was a Pig Went Out to Dig')
-
-AwardWinningSongwriter.isPrototypeOf(sharon)
-  //=> true
 ~~~~~~~~
-
-As we can see, `sharon` now delegates its behaviour to `SingsToChildren`, and `SingsToChildren` delegates to `AwardWinningSongwriter`, because we composed `Object.create(AwardWinningSongwriter)` with `resolve(HasChildren, {initialize: 'after'})`.
-
-Most importantly, we have created an `initialize` method that compose the `initialize` behaviour of `SingsSongs`, `HasAwards`, and `HasChildren`, even though some of these were in a prototype.
-
-Composing behaviour between prototypes and their super-prototypes higher in the chain is an important object-oriented technique. We'll discuss that next.
