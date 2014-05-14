@@ -80,8 +80,6 @@ mainmatter:
 
   markdown/mainmatter/8.composing-metaobjects/title.md
 
-    markdown/mainmatter/8.composing-metaobjects/0.introduction.md
-
     markdown/mainmatter/8.composing-metaobjects/1.partial-proxies.md
 
     markdown/mainmatter/8.composing-metaobjects/2.safe-composition.md
