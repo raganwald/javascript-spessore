@@ -1,4 +1,4 @@
-## Composable Behaviour in JavaScript
+## Source Code: Composing Behaviour
 
 ~~~~~~~~
 var __slice = [].slice;
@@ -206,6 +206,31 @@ function resolve(behaviour, policySpecification) {
       result[methodName][policy] = behaviour[methodName];
     }
     else throw "'" + policy + "' is unsupported";
+  });
+
+  return result;
+}
+
+function resolveByName (behaviour) {
+  var result = Object.create(null);
+
+  Object.keys(behaviour).forEach(function (methodName) {
+    var resolver = Object.keys(policies).reduce(function (acc, policy) {
+      if (Object.keys(acc).length === 0) {
+        var regex = new RegExp("^" + policy + "([A-Z])(.*)$"),
+            actualMethodName;
+        if (md = methodName.match(regex)) {
+          actualMethodName = md[1].toLowerCase() + md[2];
+          acc[actualMethodName] = {};
+          acc[actualMethodName][policy] = behaviour[methodName];
+        }
+      }
+      return acc;
+    }, Object.create(null));
+    if (Object.keys(resolver).length === 0) {
+      result[methodName] = behaviour[methodName];
+    }
+    else extend(result, resolver);
   });
 
   return result;
