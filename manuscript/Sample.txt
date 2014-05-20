@@ -10,57 +10,63 @@ frontmatter:
 
 mainmatter:
 
-  markdown/mainmatter/1.lungo/title.md
+markdown/mainmatter/7.encapsulation/title.md
 
-    markdown/mainmatter/1.lungo/0-introduction.md
+  markdown/mainmatter/7.encapsulation/0.problem.md
 
-    markdown/mainmatter/1.lungo/1-pojos.md
+  markdown/mainmatter/7.encapsulation/1.proxies-again.md
 
-    markdown/mainmatter/1.lungo/3-objects/1.encapsulation.md
+  markdown/mainmatter/7.encapsulation/2.metaobjects.md
 
-    markdown/mainmatter/1.lungo/3-objects/2.composition-and-extension.md
+  markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
 
-    markdown/mainmatter/1.lungo/3-objects/3.this.md
-
-    markdown/mainmatter/1.lungo/3-objects/4.context.md
-
-    markdown/mainmatter/1.lungo/3-objects/6.extend-pojo.md
-
-    markdown/mainmatter/1.lungo/4-instances-and-classes/1a.simple.md
-
-    markdown/mainmatter/1.lungo/4-instances-and-classes/1b.queues.md
-
-    markdown/mainmatter/1.lungo/4-instances-and-classes/2.binding.md
-
-    markdown/mainmatter/1.lungo/4-instances-and-classes/5.object-methods.md
-
-    markdown/mainmatter/1.lungo/4-instances-and-classes/6.extends.md
-
-    markdown/mainmatter/1.lungo/summary.md
+  markdown/mainmatter/7.encapsulation/4.privacy.md
 
 
-  markdown/mainmatter/7.encapsulation/title.md
+markdown/mainmatter/8.composing-metaobjects/title.md
 
-    markdown/mainmatter/7.encapsulation/0.problem.md
+  markdown/mainmatter/8.composing-metaobjects/1.partial-proxies.md
 
-    markdown/mainmatter/7.encapsulation/1.proxies-again.md
+  markdown/mainmatter/8.composing-metaobjects/2.safe-composition.md
 
-    markdown/mainmatter/7.encapsulation/2.metaobjects.md
+  markdown/mainmatter/8.composing-metaobjects/3.prototypes.md
 
-    markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
+  markdown/mainmatter/8.composing-metaobjects/4.methods.md
 
-
-  markdown/mainmatter/8.composing-metaobjects/title.md
-
-    markdown/mainmatter/8.composing-metaobjects/0.introduction.md
-
-    markdown/mainmatter/8.composing-metaobjects/1.partial-proxies.md
-
-    markdown/mainmatter/8.composing-metaobjects/2.safe-composition.md
-
-    markdown/mainmatter/8.composing-metaobjects/3.prototypes.md
-
-    markdown/mainmatter/8.composing-metaobjects/4.methods.md
+  markdown/mainmatter/8.composing-metaobjects/z.behaviour.md
 
 
 backmatter:
+
+  markdown/backmatter/title.md
+
+
+  markdown/backmatter/1.lungo/title.md
+
+    markdown/backmatter/1.lungo/0-introduction.md
+
+    markdown/backmatter/1.lungo/1-pojos.md
+
+    markdown/backmatter/1.lungo/3-objects/1.encapsulation.md
+
+    markdown/backmatter/1.lungo/3-objects/2.composition-and-extension.md
+
+    markdown/backmatter/1.lungo/3-objects/3.this.md
+
+    markdown/backmatter/1.lungo/3-objects/4.context.md
+
+    markdown/backmatter/1.lungo/3-objects/6.extend-pojo.md
+
+    markdown/backmatter/1.lungo/4-instances-and-classes/1a.simple.md
+
+    markdown/backmatter/1.lungo/4-instances-and-classes/1b.queues.md
+
+    markdown/backmatter/1.lungo/4-instances-and-classes/2.binding.md
+
+    markdown/backmatter/1.lungo/4-instances-and-classes/5.object-methods.md
+
+    markdown/backmatter/1.lungo/4-instances-and-classes/6.extends.md
+
+    markdown/backmatter/1.lungo/summary.md
+
+    markdown/backmatter/utilities.md
