@@ -88,8 +88,6 @@ mainmatter:
 
     markdown/mainmatter/8.composing-metaobjects/4.methods.md
 
-    markdown/mainmatter/8.composing-metaobjects/5.extension.md
-
     markdown/mainmatter/8.composing-metaobjects/z.behaviour.md
 
 
