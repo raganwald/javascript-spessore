@@ -89,16 +89,10 @@ function partialProxy (baseObject, methods) {
   return proxyObject;
 }
 
-function methodsOfType (behaviour, type) {
-  var methods = [],
-      methodName;
-
-  for (methodName in behaviour) {
-    if (typeof(behaviour[methodName]) === type) {
-      methods.push(methodName);
-    }
-  };
-  return methods;
+function methodsOfType (behaviour, list, type) {
+  return list.filter(function (methodName) {
+    return typeof(behaviour[methodName]) === type;
+  });
 }
 
 function propertyFlags (behaviour) {
@@ -114,8 +108,8 @@ function propertyFlags (behaviour) {
   return properties;
 }
 
-function methodsThatResolve (behaviour) {
-  return methodsOfType(behaviour, 'object').filter(function (methodName) {
+function methodsThatResolve (behaviour, list) {
+  return methodsOfType(behaviour, list, 'object').filter(function (methodName) {
     return behaviour[methodName] != null;
   });
 }
@@ -124,8 +118,66 @@ var number = 0;
 
 function encapsulate (behaviour) {
   var safekeepingName = "__" + ++number + "__",
-      definedMethods = methodsOfType(behaviour, 'function'),
-      dependencies = methodsOfType(behaviour, 'undefined'),
+      methods = Object.keys(behaviour).filter(function (methodName) {
+          return typeof behaviour[methodName] === 'function';
+        }),
+      privateMethods = methods.filter(function (methodName) {
+          return methodName[0] === '_';
+        }),
+      publicMethods = methods.filter(function (methodName) {
+          return methodName[0] !== '_';
+        }),
+      proxyPrototype;
+
+  function createContext (methodReceiver) {
+    return proxy(methodReceiver, proxyPrototype);
+  }
+
+  function getContext (methodReceiver) {
+    var context = methodReceiver[safekeepingName];
+    if (context == null) {
+      context = createContext(methodReceiver);
+      Object.defineProperty(methodReceiver, safekeepingName, {
+        enumerable: false,
+        writable: false,
+        value: context
+      });
+    }
+    return context;
+  }
+
+  proxyPrototype = privateMethods.reduce(function (acc, methodName) {
+    acc = acc || {};
+    acc[methodName] = behaviour[methodName];
+    return acc;
+  }, null);
+
+  return publicMethods.reduce(function (acc, methodName) {
+    var methodBody = behaviour[methodName];
+
+    acc[methodName] = function () {
+      var context = getContext(this),
+          result = behaviour[methodName].apply(context, arguments);
+      return (result === context) ? this : result;
+    };
+    return acc;
+  }, {});
+}
+
+function encapsulate (behaviour) {
+  var safekeepingName = "__" + ++number + "__",
+      methods = Object.keys(behaviour).filter(function (methodName) {
+          return typeof behaviour[methodName] === 'function';
+        }),
+      privateMethods = methods.filter(function (methodName) {
+          return methodName[0] === '_';
+        }),
+      publicMethods = methods.filter(function (methodName) {
+          return methodName[0] !== '_';
+        }),
+      proxyPrototype;
+      definedMethods = methodsOfType(behaviour, publicMethods, 'function'),
+      dependencies = methodsOfType(behaviour, publicMethods, 'undefined'),
       encapsulatedObject = {};
 
   function createContext (methodReceiver) {
@@ -144,6 +196,12 @@ function encapsulate (behaviour) {
     }
     return context;
   }
+
+  proxyPrototype = privateMethods.reduce(function (acc, methodName) {
+    acc = acc || {};
+    acc[methodName] = behaviour[methodName];
+    return acc;
+  }, null);
 
   definedMethods.forEach(function (methodName) {
     var methodBody = behaviour[methodName];
@@ -251,7 +309,10 @@ function composeBehaviours () {
 
   return behaviours.reduce(function (composed, behaviour) {
     var definedMethods = methodsOfType(behaviour, 'function'),
-        resolutions = methodsThatResolve(behaviour),
+        publicMethods = methods.filter(function (methodName) {
+            return methodName[0] !== '_';
+          }),
+        resolutions = methodsThatResolve(behaviour, publicMethods),
         dependencies = methodsOfType(behaviour, 'undefined');
 
     if (!allEncompasses(Object.getPrototypeOf(composed), Object.getPrototypeOf(behaviour))) {
