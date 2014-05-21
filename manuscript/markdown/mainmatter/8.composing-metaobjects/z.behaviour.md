@@ -178,10 +178,11 @@ function encapsulate (behaviour) {
       proxyPrototype;
       definedMethods = methodsOfType(behaviour, publicMethods, 'function'),
       dependencies = methodsOfType(behaviour, publicMethods, 'undefined'),
-      encapsulatedObject = {};
+      encapsulatedObject = {},
+      proxyPrototype;
 
   function createContext (methodReceiver) {
-    return partialProxy(methodReceiver, dependencies);
+    return partialProxy(methodReceiver, dependencies, proxyPrototype);
   }
 
   function getContext (methodReceiver) {
@@ -248,8 +249,6 @@ var policies = {
     }
   }
 };
-
-// We can attach them to a behaviour with a helper function:
 
 function resolve(behaviour, policySpecification) {
   var result = extend(Object.create(null), behaviour);
