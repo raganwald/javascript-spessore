@@ -77,7 +77,7 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
 
-    markdown/mainmatter/7.encapsulation/4.promiscuity.md
+    markdown/mainmatter/7.encapsulation/4.self.md
 
     markdown/mainmatter/7.encapsulation/5.privacy.md
 

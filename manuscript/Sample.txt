@@ -20,7 +20,9 @@ markdown/mainmatter/7.encapsulation/title.md
 
   markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
 
-  markdown/mainmatter/7.encapsulation/4.privacy.md
+    markdown/mainmatter/7.encapsulation/4.self.md
+
+    markdown/mainmatter/7.encapsulation/5.privacy.md
 
 
 markdown/mainmatter/8.composing-metaobjects/title.md

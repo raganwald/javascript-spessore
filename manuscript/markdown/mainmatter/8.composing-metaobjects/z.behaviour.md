@@ -118,54 +118,6 @@ var number = 0;
 
 function encapsulate (behaviour) {
   var safekeepingName = "__" + ++number + "__",
-      methods = Object.keys(behaviour).filter(function (methodName) {
-          return typeof behaviour[methodName] === 'function';
-        }),
-      privateMethods = methods.filter(function (methodName) {
-          return methodName[0] === '_';
-        }),
-      publicMethods = methods.filter(function (methodName) {
-          return methodName[0] !== '_';
-        }),
-      proxyPrototype;
-
-  function createContext (methodReceiver) {
-    return proxy(methodReceiver, proxyPrototype);
-  }
-
-  function getContext (methodReceiver) {
-    var context = methodReceiver[safekeepingName];
-    if (context == null) {
-      context = createContext(methodReceiver);
-      Object.defineProperty(methodReceiver, safekeepingName, {
-        enumerable: false,
-        writable: false,
-        value: context
-      });
-    }
-    return context;
-  }
-
-  proxyPrototype = privateMethods.reduce(function (acc, methodName) {
-    acc = acc || {};
-    acc[methodName] = behaviour[methodName];
-    return acc;
-  }, null);
-
-  return publicMethods.reduce(function (acc, methodName) {
-    var methodBody = behaviour[methodName];
-
-    acc[methodName] = function () {
-      var context = getContext(this),
-          result = behaviour[methodName].apply(context, arguments);
-      return (result === context) ? this : result;
-    };
-    return acc;
-  }, {});
-}
-
-function encapsulate (behaviour) {
-  var safekeepingName = "__" + ++number + "__",
       properties = Object.keys(behaviour),
       methods = properties.filter(function (methodName) {
           return typeof behaviour[methodName] === 'function';
@@ -182,7 +134,11 @@ function encapsulate (behaviour) {
       proxyPrototype;
 
   function createContext (methodReceiver) {
-    return partialProxy(methodReceiver, publicMethods.concat(dependencies), proxyPrototype);
+    return Object.defineProperty(
+      partialProxy(methodReceiver, publicMethods.concat(dependencies), proxyPrototype),
+      'self',
+      { writable: false, enumerable: false, value: methodReceiver }
+    );
   }
 
   function getContext (methodReceiver) {
@@ -402,7 +358,7 @@ var Subscribable = encapsulate({
   },
   notify: function () {
     this.subscribers.forEach( function (subscriber) {
-      subscriber.call(this, arguments);
+      subscriber.call(this.self, arguments);
     });
   }
 });
