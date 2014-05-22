@@ -74,8 +74,8 @@ function extend () {
   return consumer;
 };
 
-function partialProxy (baseObject, methods) {
-  var proxyObject = Object.create(null);
+function partialProxy (baseObject, methods, proxyPrototype) {
+  var proxyObject = Object.create(proxyPrototype || null);
 
   methods.forEach(function (methodName) {
     proxyObject[methodName] = function () {
@@ -108,9 +108,9 @@ function propertyFlags (behaviour) {
   return properties;
 }
 
-function methodsThatResolve (behaviour, list) {
-  return methodsOfType(behaviour, list, 'object').filter(function (methodName) {
-    return behaviour[methodName] != null;
+function methodsThatResolve (behaviour) {
+  return methodsOfType(behaviour, Object.keys(behaviour), 'object').filter(function (methodName) {
+    return behaviour[methodName] != null && methodName[0] != '_';
   });
 }
 
@@ -166,7 +166,8 @@ function encapsulate (behaviour) {
 
 function encapsulate (behaviour) {
   var safekeepingName = "__" + ++number + "__",
-      methods = Object.keys(behaviour).filter(function (methodName) {
+      properties = Object.keys(behaviour),
+      methods = properties.filter(function (methodName) {
           return typeof behaviour[methodName] === 'function';
         }),
       privateMethods = methods.filter(function (methodName) {
@@ -175,14 +176,13 @@ function encapsulate (behaviour) {
       publicMethods = methods.filter(function (methodName) {
           return methodName[0] !== '_';
         }),
-      proxyPrototype;
       definedMethods = methodsOfType(behaviour, publicMethods, 'function'),
-      dependencies = methodsOfType(behaviour, publicMethods, 'undefined'),
+      dependencies = methodsOfType(behaviour, properties, 'undefined'),
       encapsulatedObject = {},
       proxyPrototype;
 
   function createContext (methodReceiver) {
-    return partialProxy(methodReceiver, dependencies, proxyPrototype);
+    return partialProxy(methodReceiver, publicMethods.concat(dependencies), proxyPrototype);
   }
 
   function getContext (methodReceiver) {
@@ -212,6 +212,12 @@ function encapsulate (behaviour) {
           result  = methodBody.apply(context, arguments);
       return (result === context) ? this : result;
     };
+  });
+
+  dependencies.forEach(function (methodName) {
+    if (encapsulatedObject[methodName] == null) {
+      encapsulatedObject[methodName] = void 0;
+    }
   });
 
   return encapsulatedObject;
@@ -300,59 +306,144 @@ function allEncompasses (prototype1, prototype2) {
   return Object.prototype.isPrototypeOf.call(prototype2, prototype1);
 }
 
+function extendBehaviour (composed, behaviour) {
+  var definedMethods = Object.keys(behaviour).filter(function (methodName) {
+          return typeof behaviour[methodName] === 'function' && methodName[0] !== '_';
+        }),
+      dependencies = Object.keys(behaviour).filter(function (methodName) {
+          return typeof behaviour[methodName] === 'undefined' && methodName[0] !== '_';
+        }),
+      resolutions = methodsThatResolve(behaviour);
+
+  // quick check for validity
+  if (!allEncompasses(Object.getPrototypeOf(composed), Object.getPrototypeOf(behaviour))) {
+    throw "incompatible prototypes";
+  }
+
+  // copy all defined methods without overwriting
+  definedMethods.forEach(function (methodName) {
+    if (composed[methodName] === void 0) { // none or a dependency
+      composed[methodName] = behaviour[methodName];
+    }
+    else throw "'" + methodName + "' has a conflict."
+  });
+
+  // remove dependencies where satisfied
+  dependencies.forEach(function (methodName) {
+    if (composed[methodName] === void 0) { // none or a dependency
+      composed[methodName] = void 0;
+    }
+    else if (typeof(composed[methodName]) !== 'function') {
+      throw "'" + methodName + "' conflicts with entry of type '" + typeof(composed[methodName]) + "'";
+    }
+    // else do nothing, dependency is satisfied
+  });
+
+  // resolve outstanding
+  resolutions.forEach(function (methodName) {
+    var resolution = behaviour[methodName],
+        policy = Object.keys(resolution)[0],
+        resolutionPolicy = policies[policy],
+        newMethod = resolution[policy],
+        existingMethod;
+
+    if (methodName in composed) {
+      existingMethod = composed[methodName];
+      if (typeof(existingMethod) === 'function') {
+        composed[methodName] = resolutionPolicy(newMethod, existingMethod);
+      }
+      else throw "'" + methodName + "' is attempting to resolve a '" + typeof(existingMethod) + "'";
+    }
+    else throw "'" + methodName + "' is not conflicted, but was given a resolution"
+  });
+
+  return composed;
+}
+
 function composeBehaviours () {
+  // `behaviours` is an array to be reduced in place. The first element is shallow-copied
   var behaviours = __slice.call(arguments, 0),
       seed = extend(Object.create(Object.getPrototypeOf(behaviours[0])), behaviours[0]);
-
   behaviours[0] = seed;
 
-  return behaviours.reduce(function (composed, behaviour) {
-    var definedMethods = methodsOfType(behaviour, 'function'),
-        publicMethods = methods.filter(function (methodName) {
-            return methodName[0] !== '_';
-          }),
-        resolutions = methodsThatResolve(behaviour, publicMethods),
-        dependencies = methodsOfType(behaviour, 'undefined');
-
-    if (!allEncompasses(Object.getPrototypeOf(composed), Object.getPrototypeOf(behaviour))) {
-      throw "incompatible prototypes";
-    }
-
-    definedMethods.forEach(function (methodName) {
-      if (composed[methodName] === void 0) { // none or a dependency
-        composed[methodName] = behaviour[methodName];
-      }
-      else throw "'" + methodName + "' has a conflict."
-    });
-
-    dependencies.forEach(function (methodName) {
-      if (composed[methodName] === void 0) { // none or a dependency
-        composed[methodName] = void 0;
-      }
-      else if (typeof(composed[methodName]) !== 'function') {
-        throw "'" + methodName + "' conflicts with entry of type '" + typeof(composed[methodName]) + "'";
-      }
-      // else do nothing, dependency is satisfied
-    });
-
-    resolutions.forEach(function (methodName) {
-      var resolution = behaviour[methodName],
-          policy = Object.keys(resolution)[0],
-          resolutionPolicy = policies[policy],
-          newMethod = resolution[policy],
-          existingMethod;
-
-      if (methodName in composed) {
-        existingMethod = composed[methodName];
-        if (typeof(existingMethod) === 'function') {
-          composed[methodName] = resolutionPolicy(newMethod, existingMethod);
-        }
-        else throw "'" + methodName + "' is attempting to resolve a '" + typeof(existingMethod) + "'";
-      }
-      else throw "'" + methodName + "' is not conflicted, but was given a resolution"
-    });
-
-    return composed;
-  });
+  return behaviours.reduce(extendBehaviour);
 }
+~~~~~~~~
+
+For example:
+
+~~~~~~~~
+var Songwriter = encapsulate({
+  initialize: function () {
+    this._songs = [];
+    return this;
+  },
+  addSong: function (name) {
+    this._songs.push(name);
+    return this;
+  },
+  songs: function () {
+    return this._songs;
+  }
+});
+
+var Subscribable = encapsulate({
+  initialize: function () {
+    this.subscribers = [];
+    return this;
+  },
+  subscribe: function (callback) {
+    this.subscribers.push(callback);
+  },
+  unsubscribe: function (callback) {
+    this.subscribers = this.subscribers.filter( function (subscriber) {
+      return subscriber !== callback;
+    });
+  },
+  notify: function () {
+    this.subscribers.forEach( function (subscriber) {
+      subscriber.call(this, arguments);
+    });
+  }
+});
+
+var sweetBabyJames = Object.create(composeBehaviours(
+  Songwriter,
+  resolve( Subscribable, {initialize: 'after'} ),
+  resolveByName(
+    encapsulate({
+      notify: undefined,
+      afterAddSong: function () { return this.notify(); }
+    })
+  )
+)).initialize();
+
+var SongwriterView = encapsulate({
+  initialize: function (model, name) {
+    this.model = model;
+    this.name = name;
+    this.model.subscribe(this.render.bind(this));
+    return this;
+  },
+  _englishList: function (list) {
+    var butLast = list.slice(0, list.length - 1),
+        last = list[list.length - 1];
+    return butLast.length > 0
+           ? [butLast.join(', '), last].join(' and ')
+           : last;
+  },
+  render: function () {
+    var songList  = this.model.songs().length > 0
+                    ? [" has written " + this._englishList(this.model.songs().map(function (song) {
+                        return "'" + song + "'"; }))]
+                    : [];
+
+    console.log(this.name + songList);
+    return this;
+  }
+})
+
+var jamesView = Object.create(SongwriterView).initialize(sweetBabyJames, 'James Taylor');
+
+sweetBabyJames.addSong('Fire and Rain')
 ~~~~~~~~
