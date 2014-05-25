@@ -1,4 +1,4 @@
-# Strict Encapsulation
+# Encapsulation and Composition
 
 ![Nespresso Capsules](images/7/capsules.jpg)[^capsules]
 
