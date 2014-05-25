@@ -1,4 +1,4 @@
-# Source Code
+# Appendix: Source Code
 
 ![Coffee Chart](images/backmatter/chart.jpg)[^chart]
 

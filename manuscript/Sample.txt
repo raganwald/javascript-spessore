@@ -34,8 +34,6 @@ mainmatter:
 
 backmatter:
 
-  markdown/backmatter/title.md
-
 
   markdown/backmatter/1.lungo/title.md
 

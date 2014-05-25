@@ -1,4 +1,4 @@
-# Caffé Lungo {#lungo}
+# Appendix: Caffé Lungo {#lungo}
 
 ![Transparent Sanremo espresso machine, London Coffee Festival, Truman Brewery, Brick Lane, Hackney, London, UK](images/doctorow.jpg)[^doctorow]
 
