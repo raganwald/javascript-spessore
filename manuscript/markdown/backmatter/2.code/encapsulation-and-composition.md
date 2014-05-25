@@ -1,4 +1,4 @@
-## Source Code
+## Encapsulation and Composition
 
 ~~~~~~~~
 var __slice = [].slice;

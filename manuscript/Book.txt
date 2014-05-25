@@ -144,6 +144,10 @@ backmatter:
 
     markdown/backmatter/1.lungo/summary.md
 
-    markdown/backmatter/utilities.md
 
-    markdown/backmatter/code.md
+
+  markdown/backmatter/2.code/title.md
+
+    markdown/backmatter/2.code/encapsulation-and-composition.md
+
+    markdown/backmatter/2.code/utilities.md
