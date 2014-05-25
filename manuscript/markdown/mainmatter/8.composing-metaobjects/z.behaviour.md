@@ -179,6 +179,93 @@ function encapsulate (behaviour) {
   return encapsulatedObject;
 }
 
+/////////////////////////////////////////////////////////
+
+function isUndefined (value) {
+  return typeof value === 'undefined';
+}
+
+function isntUndefined (value) {
+  return typeof value !== 'undefined';
+}
+
+function isFunction (value) {
+  return typeof value === 'function';
+}
+
+function orderStrategy2 () {
+  if (arguments.length === 1) {
+    return arguments[0];
+  }
+  else {
+    var fns = __slice.call(arguments, 0);
+
+    return function sequenced () {
+      var args    = arguments,
+          context = this,
+          values  = fns.map(function (fn) {
+            return fn.apply(context, args);
+          }).filter(isntUndefined);
+
+      if (values.length > 0) {
+        return values[values.length - 1];
+      }
+    }
+  }
+}
+
+function propertiesToArrays (metaobjects) {
+  return metaobjects.reduce(function (collected, metaobject) {
+    Object.keys(metaobject).forEach(function (key) {
+      if (key in collected) {
+        collected[key].push(metaobject[key]);
+      }
+      else collected[key] = [metaobject[key]]
+    });
+    return collected;
+  }, {})
+}
+
+function resolveUndefineds (collected) {
+  return Object.keys(collected).reduce(function (resolved, key) {
+    var values = collected[key];
+
+    if (values.every(isUndefined)) {
+      resolved[key] = undefined;
+    }
+    else resolved[key] = values.filter(isntUndefined);
+
+    return resolved;
+  }, {});
+}
+
+function applySequenceFn(resolveds, protocol) {
+  return Object.keys(resolveds).reduce( function (applied, key) {
+    var value = resolveds[key];
+
+    if (isUndefined(value)) {
+      applied[key] = value;
+    }
+    else if (value.every(isFunction)) {
+      applied[key] = protocol.apply(null, value);
+    }
+    else throw "Don't know what to do with " + value;
+
+    return applied;
+  }, {});
+}
+
+function sequence () {
+  var metaobjects = __slice.call(arguments, 0),
+      arrays      = propertiesToArrays(metaobjects),
+      resolved    = resolveUndefineds(arrays),
+      sequenced   = applySequenceFn(resolved, orderStrategy2);
+
+  return sequenced;
+}
+
+/////////////////////////////////////////////////////////
+
 var policies = {
   overwrite: function overwrite (fn1, fn2) {
     return fn1;
