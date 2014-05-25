@@ -305,7 +305,7 @@ function composeMetaobjects {
       arrays      = propertiesToArrays(metaobjects),
       resolved    = resolveUndefineds(arrays),
       seed        = seedFor(metaobjects),
-      composed   = applyProtocol(seed, resolved, orderStrategy2);
+      composed    = applyProtocol(seed, resolved, orderStrategy2);
 
   return composed;
 }
