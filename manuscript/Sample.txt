@@ -10,32 +10,26 @@ frontmatter:
 
 mainmatter:
 
-markdown/mainmatter/7.encapsulation/title.md
 
-  markdown/mainmatter/7.encapsulation/0.problem.md
+  markdown/mainmatter/7.encapsulation/title.md
 
-  markdown/mainmatter/7.encapsulation/1.proxies-again.md
+    markdown/mainmatter/7.encapsulation/0.problem.md
 
-  markdown/mainmatter/7.encapsulation/2.metaobjects.md
+    markdown/mainmatter/7.encapsulation/1.proxies-again.md
 
-  markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
+    markdown/mainmatter/7.encapsulation/2.metaobjects.md
+
+    markdown/mainmatter/7.encapsulation/3.the-encapsulate-function.md
 
     markdown/mainmatter/7.encapsulation/4.self.md
 
     markdown/mainmatter/7.encapsulation/5.privacy.md
 
+    markdown/mainmatter/7.encapsulation/6.closed.md
 
-markdown/mainmatter/8.composing-metaobjects/title.md
+    markdown/mainmatter/7.encapsulation/7.partial-proxies.md
 
-  markdown/mainmatter/8.composing-metaobjects/1.partial-proxies.md
-
-  markdown/mainmatter/8.composing-metaobjects/2.safe-composition.md
-
-  markdown/mainmatter/8.composing-metaobjects/3.prototypes.md
-
-  markdown/mainmatter/8.composing-metaobjects/4.methods.md
-
-  markdown/mainmatter/8.composing-metaobjects/z.behaviour.md
+    markdown/mainmatter/7.encapsulation/8.composing-metaobjects.md
 
 
 backmatter:
@@ -71,4 +65,10 @@ backmatter:
 
     markdown/backmatter/1.lungo/summary.md
 
-    markdown/backmatter/utilities.md
+
+
+  markdown/backmatter/2.code/title.md
+
+    markdown/backmatter/2.code/encapsulation-and-composition.md
+
+    markdown/backmatter/2.code/utilities.md

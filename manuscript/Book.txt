@@ -88,15 +88,6 @@ mainmatter:
     markdown/mainmatter/7.encapsulation/8.composing-metaobjects.md
 
 
-  markdown/mainmatter/8.composing-metaobjects/title.md
-
-    markdown/mainmatter/8.composing-metaobjects/1.partial-proxies.md
-
-    markdown/mainmatter/8.composing-metaobjects/4.methods.md
-
-    markdown/mainmatter/8.composing-metaobjects/z.behaviour.md
-
-
   markdown/mainmatter/9.mops/title.md
 
     markdown/mainmatter/9.mops/0.genesis.md
