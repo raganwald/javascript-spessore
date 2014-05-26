@@ -1,5 +1,7 @@
 frontmatter:
 
+  markdown/frontmatter/sample.md
+
   markdown/frontmatter/title.md
 
     markdown/frontmatter/lisp.md
