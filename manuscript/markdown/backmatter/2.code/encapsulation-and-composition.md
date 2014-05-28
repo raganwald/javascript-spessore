@@ -164,7 +164,7 @@ function encapsulate (behaviour) {
     var methodBody = behaviour[methodName];
 
     Object.defineProperty(encapsulatedObject, methodName, {
-      enumerated: true,
+      enumerable: true,
       writable: false,
       value: function () {
         var context = getContext(this),
@@ -300,7 +300,7 @@ function seedFor (objectList) {
   return seed;
 }
 
-function composeMetaobjects {
+function composeMetaobjects () {
   var metaobjects = __slice.call(arguments, 0),
       arrays      = propertiesToArrays(metaobjects),
       resolved    = resolveUndefineds(arrays),
