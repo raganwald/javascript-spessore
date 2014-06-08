@@ -20,19 +20,19 @@ mainmatter:
 
   markdown/mainmatter/2.objects/title.md
 
-    markdown/mainmatter/2.objects/introducton.md
+    markdown/mainmatter/2.objects/1.introducton.md
 
-    markdown/mainmatter/2.objects/immutable-properties.md
+    markdown/mainmatter/2.objects/2.immutable-properties.md
 
-    markdown/mainmatter/2.objects/copy-on-write.md
+    markdown/mainmatter/2.objects/3.copy-on-write.md
 
-    markdown/mainmatter/2.objects/accessors.md
+    markdown/mainmatter/2.objects/4.accessors.md
 
-    markdown/mainmatter/2.objects/hiding.md
+    markdown/mainmatter/2.objects/5.hiding.md
 
-    markdown/mainmatter/2.objects/proxies.md
+    markdown/mainmatter/2.objects/6.proxies.md
 
-    markdown/mainmatter/2.objects/ones-and-twos.md
+    markdown/mainmatter/2.objects/7.ones-and-twos.md
 
 
   markdown/mainmatter/3.methods/title.md
