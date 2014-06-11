@@ -48,36 +48,6 @@ mainmatter:
 backmatter:
 
 
-  markdown/backmatter/1.lungo/title.md
-
-    markdown/backmatter/1.lungo/0-introduction.md
-
-    markdown/backmatter/1.lungo/1-pojos.md
-
-    markdown/backmatter/1.lungo/3-objects/1.encapsulation.md
-
-    markdown/backmatter/1.lungo/3-objects/2.composition-and-extension.md
-
-    markdown/backmatter/1.lungo/3-objects/3.this.md
-
-    markdown/backmatter/1.lungo/3-objects/4.context.md
-
-    markdown/backmatter/1.lungo/3-objects/6.extend-pojo.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/1a.simple.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/1b.queues.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/2.binding.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/5.object-methods.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/6.extends.md
-
-    markdown/backmatter/1.lungo/summary.md
-
-
-
   markdown/backmatter/2.code/title.md
 
     markdown/backmatter/2.code/encapsulation-and-composition.md

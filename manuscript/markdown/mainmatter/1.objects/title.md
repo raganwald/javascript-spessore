@@ -6,6 +6,4 @@
 
 {pagebreak}
 
-I> **Lungo** is Italian for 'long', and refers to the coffee beverage made by using an espresso machine to make an espresso (single or double dose or shot) with much more water (generally twice as much), resulting in a *stretched* espresso, a *lungo*. In French it is called *café allongé*.--[Wikipedia](https://en.wikipedia.org/wiki/Lungo)
-
-In this chapter we will take a look at how very simple objects work in JavaScript.
+I> In this chapter, we will take a look at how very simple objects work in JavaScript.
