@@ -35,36 +35,28 @@ mainmatter:
     markdown/backmatter/1.objects/7.extend-pojo.md
 
 
-  markdown/mainmatter/2.objects/title.md
+  markdown/backmatter/2.object-recipes/title.md
 
-    markdown/mainmatter/2.objects/1.introducton.md
+    markdown/backmatter/2.object-recipes/2.immutable-properties.md
 
-    markdown/mainmatter/2.objects/2.immutable-properties.md
+    markdown/backmatter/2.object-recipes/4.accessors.md
 
-    markdown/mainmatter/2.objects/3.copy-on-write.md
+    markdown/backmatter/2.object-recipes/5.hiding.md
 
-    markdown/mainmatter/2.objects/4.accessors.md
-
-    markdown/mainmatter/2.objects/5.hiding.md
-
-    markdown/mainmatter/2.objects/6.proxies.md
-
-    markdown/mainmatter/2.objects/7.ones-and-twos.md
+    markdown/backmatter/2.object-recipes/6.proxies.md
 
 
-  markdown/mainmatter/3.methods/title.md
+  markdown/mainmatter/3.prototypes/title.md
 
-    markdown/mainmatter/3.methods/what.md
+    markdown/mainmatter/3.prototypes/1a.simple.md
 
-    markdown/mainmatter/3.methods/this.md
+    markdown/mainmatter/3.prototypes/1b.queues.md
 
-    markdown/mainmatter/3.methods/literal-vs-semantic.md
+    markdown/mainmatter/3.prototypes/2.binding.md
 
-    markdown/mainmatter/3.methods/composite.md
+    markdown/mainmatter/3.prototypes/5.object-methods.md
 
-    markdown/mainmatter/3.methods/metamethods.md
-
-    markdown/mainmatter/3.methods/pattern-matching.md
+    markdown/mainmatter/3.prototypes/6.extends.md
 
 
   markdown/mainmatter/6.metaobjects/title.md
