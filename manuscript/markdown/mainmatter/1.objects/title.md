@@ -1,4 +1,4 @@
-# Lungo: Simple JavaScript Objects {#simple-objects}
+# JavaScript's Objects {#simple-objects}
 
 ![Transparent Sanremo espresso machine, London Coffee Festival, Truman Brewery, Brick Lane, Hackney, London, UK](images/doctorow.jpg)[^doctorow]
 
