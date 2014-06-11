@@ -42,7 +42,7 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/8.composing-metaobjects.md
 
-    markdown/mainmatter/7.encapsulation/8.transforming-metaobjects.md
+    markdown/mainmatter/7.encapsulation/9.transforming-metaobjects.md
 
 
 backmatter:
