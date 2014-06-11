@@ -1,6 +1,6 @@
 ## Plain Old JavaScript Objects {#objects}
 
-In JavaScript, an object is a map from names to values. Many other languages call these "dictionaries" or "associative arrays." Some call them "Hashes," an abbreviation for "HashMap"  or "Hash Table." In most cases, the word [Dictionary][aa] describes how it works, while terms like [HashMap or Hash Table][HashMap] describe dictionary implementations that are optimized for fast lookup. 
+In JavaScript, objects are data structures that provide a map from names to values. Many other languages call these "dictionaries" or "associative arrays." Some call them "Hashes," an abbreviation for "HashMap"  or "Hash Table." In most cases, the word [Dictionary][aa] describes how it works, while terms like [HashMap or Hash Table][HashMap] describe dictionary implementations that are optimized for fast lookup.
 
 [aa]: https://en.wikipedia.org/wiki/Dictionary_(data_structure)
 [HashMap]: https://en.wikipedia.org/wiki/Hash_table
@@ -59,25 +59,37 @@ Napespaces are typically stateless: They contain functions and/or other constant
 
 The prime purpose of a namespace is to provide disambiguation for a set of related named constants and functions. `Arithmetic` is an example of a namespace. It could be handy: If we were writing a fitness application, we might want to use a variable called `abs` for another purpose, and we wouldn't want to accidentally shadow or overwrite our function for determining the absolute value of a number.
 
-### POJOs
+### pojos as data structures
 
-Namespaces are typically created statically and named. But objects need not by named, and they need not be static. We could, for example, use an object to name arguments for a function. Here's a variation of our `Arithmetic.power` function using named parameters:
+Namespaces are typically created statically and named. But objects need not by named, and they need not be static. Dictionaries can be used when we need a dynamic data structure that has arbitrary key-value pairs added and removed, and they can also be used to implement data structures (or parts of data structures) with named components.
+
+Here're some functions that operate on a dictionary:
 
 ~~~~~~~~
-function power (arg) {
-	var number   = arg.number,
-	    exponent = arg.exponent;
-			
-	if (exponent <= 0) {
-		return 1;
-	}
-	else return number * power({number: number, exponent: exponent-1});
+function isNameAvailable (usersByName, name) {
+  return usersByName[name] === undefined;
 }
 
-power({number: 2, exponent: 4})
-	//=> 16
+function addUser (usersByName, user) {
+  if (isNameAvailable(user.name)) {
+    usersByName[name] = user;
+    return user;
+  }
+  else throw "" + use.name + " already exists";
+}
 ~~~~~~~~
 
-The parameter `arg` is an object that, if used properly, has `number` and `exponent` properties bound to the desired parameters for the `power` function. `arg` designed to name two values, but it isn't a "namespace" because it isn't static. It's a Plain Old JavaScript Object or "POJO." Languages like C and Ruby call such objects "Structs."
+In contrast, here's a data structure implemented with a dictionary, the "cons cell" we saw earlier:
 
-Now, `arg` is created with values, but thereafter it is not modified. This 
+~~~~~~~~
+function cons (value, list) {
+	return {
+		_a: value,
+		_d: list
+	};
+}
+~~~~~~~~
+
+We're using a dictionary as an implementation technique, but we are really writing functions that operate on a tuple with elements named `_a` and `_d`. A lot of "objects" in JavaScript are data structures with named elements. They happened to be implemented with objects that act as dictionaries, but they aren't intended to be used as arbitrary key-value stores.
+
+K> JavaScript objects are dictionaries. Dictionaries can be used to make data structures: The distinction is in how there are intended to be used. If an object is a container for arbitrary key-value pairs, it is a dictionary. If an object is a container for specific, named values, it's a custom data structure that is implemented with a dictionary.
