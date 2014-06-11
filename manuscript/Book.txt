@@ -18,32 +18,32 @@ mainmatter:
     markdown/mainmatter/0.the-big-idea/3.summary.md
 
 
-  markdown/backmatter/1.objects/title.md
+  markdown/mainmatter/1.objects/title.md
 
-    markdown/backmatter/1.objects/1.data-structures.md
+    markdown/mainmatter/1.objects/1.data-structures.md
 
-    markdown/backmatter/1.objects/2.pojos.md
+    markdown/mainmatter/1.objects/2.pojos.md
 
-    markdown/backmatter/1.objects/3.encapsulation.md
+    markdown/mainmatter/1.objects/3.encapsulation.md
 
-    markdown/backmatter/1.objects/4.composition-and-extension.md
+    markdown/mainmatter/1.objects/4.composition-and-extension.md
 
-    markdown/backmatter/1.objects/5.this.md
+    markdown/mainmatter/1.objects/5.this.md
 
-    markdown/backmatter/1.objects/6.context.md
+    markdown/mainmatter/1.objects/6.context.md
 
-    markdown/backmatter/1.objects/7.extend-pojo.md
+    markdown/mainmatter/1.objects/7.extend-pojo.md
 
 
-  markdown/backmatter/2.object-recipes/title.md
+  markdown/mainmatter/2.object-recipes/title.md
 
-    markdown/backmatter/2.object-recipes/2.immutable-properties.md
+    markdown/mainmatter/2.object-recipes/2.immutable-properties.md
 
-    markdown/backmatter/2.object-recipes/4.accessors.md
+    markdown/mainmatter/2.object-recipes/4.accessors.md
 
-    markdown/backmatter/2.object-recipes/5.hiding.md
+    markdown/mainmatter/2.object-recipes/5.hiding.md
 
-    markdown/backmatter/2.object-recipes/6.proxies.md
+    markdown/mainmatter/2.object-recipes/6.proxies.md
 
 
   markdown/mainmatter/3.prototypes/title.md
