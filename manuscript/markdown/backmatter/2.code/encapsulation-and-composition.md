@@ -3,6 +3,20 @@
 ~~~~~~~~
 var __slice = [].slice;
 
+function isUndefined (value) {
+  return typeof value === 'undefined';
+}
+
+function isntUndefined (value) {
+  return typeof value !== 'undefined';
+}
+
+function isFunction (value) {
+  return typeof value === 'function';
+}
+
+////////////////////////////////////////////////////////////
+
 function extend () {
   var consumer = arguments[0],
       providers = __slice.call(arguments, 1),
@@ -108,12 +122,6 @@ function propertyFlags (behaviour) {
   return properties;
 }
 
-function methodsThatResolve (behaviour) {
-  return methodsOfType(behaviour, Object.keys(behaviour), 'object').filter(function (methodName) {
-    return behaviour[methodName] != null && methodName[0] != '_';
-  });
-}
-
 var number = 0;
 
 function encapsulate (behaviour) {
@@ -128,18 +136,25 @@ function encapsulate (behaviour) {
       publicMethods = methods.filter(function (methodName) {
           return methodName[0] !== '_';
         }),
-      definedMethods = methodsOfType(behaviour, publicMethods, 'function'),
-      dependencies = methodsOfType(behaviour, properties, 'undefined'),
-      encapsulatedObject = {},
-      proxyPrototype;
+      dependencies = properties.filter(function (methodName) {
+		    return isUndefined(behaviour[methodName]);
+		  }),
+			methodsToProxy = publicMethods.concat(dependencies),
+      encapsulatedObject = {};
 
-  function createContext (methodReceiver) {
-    return Object.defineProperty(
-      partialProxy(methodReceiver, publicMethods.concat(dependencies), proxyPrototype),
-      'self',
-      { writable: false, enumerable: false, value: methodReceiver }
-    );
-  }
+	function createContext (methodReceiver) {
+		var innerProxy = partialProxy(methodReceiver, methodsToProxy);
+	
+		privateMethods.forEach(function (methodName) {
+			innerProxy[methodName] = behaviour[methodName];
+		});
+		
+	  return Object.defineProperty(
+	    innerProxy,
+	    'self',
+	    { writable: false, enumerable: false, value: methodReceiver }
+	  );
+	}
 
   function getContext (methodReceiver) {
     var context = methodReceiver[safekeepingName];
@@ -154,13 +169,7 @@ function encapsulate (behaviour) {
     return context;
   }
 
-  proxyPrototype = privateMethods.reduce(function (acc, methodName) {
-    acc = acc || {};
-    acc[methodName] = behaviour[methodName];
-    return acc;
-  }, null);
-
-  definedMethods.forEach(function (methodName) {
+  publicMethods.forEach(function (methodName) {
     var methodBody = behaviour[methodName];
 
     Object.defineProperty(encapsulatedObject, methodName, {
@@ -184,18 +193,6 @@ function encapsulate (behaviour) {
 }
 
 /////////////////////////////////////////////////////////
-
-function isUndefined (value) {
-  return typeof value === 'undefined';
-}
-
-function isntUndefined (value) {
-  return typeof value !== 'undefined';
-}
-
-function isFunction (value) {
-  return typeof value === 'function';
-}
 
 function orderStrategy2 () {
   if (arguments.length === 1) {
@@ -309,4 +306,5 @@ function composeMetaobjects () {
 
   return composed;
 }
+
 ~~~~~~~~

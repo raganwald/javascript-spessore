@@ -15,3 +15,7 @@ This says that if the input to `factorial` matches the pattern `0`, return 1. Ot
     map f, [x, rest...] = [f(x)] + map(rest)
 
 *TODO: A complete rewrite of pattern-matching using a meta-method*
+
+*Pattern-matching decorator*
+
+*Pattern matching in a prototype context... how does THAT work?*

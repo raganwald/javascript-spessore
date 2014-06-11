@@ -9,45 +9,54 @@ frontmatter:
 mainmatter:
 
 
-  markdown/mainmatter/1.the-big-idea/title.md
+  markdown/mainmatter/0.the-big-idea/title.md
 
-    markdown/mainmatter/1.the-big-idea/1.functions-and-objects.md
+    markdown/mainmatter/0.the-big-idea/1.functions-and-objects.md
 
-    markdown/mainmatter/1.the-big-idea/2.javascript-algebras.md
+    markdown/mainmatter/0.the-big-idea/2.javascript-algebras.md
 
-    markdown/mainmatter/1.the-big-idea/3.summary.md
-
-
-  markdown/mainmatter/2.objects/title.md
-
-    markdown/mainmatter/2.objects/introducton.md
-
-    markdown/mainmatter/2.objects/immutable-properties.md
-
-    markdown/mainmatter/2.objects/copy-on-write.md
-
-    markdown/mainmatter/2.objects/accessors.md
-
-    markdown/mainmatter/2.objects/hiding.md
-
-    markdown/mainmatter/2.objects/proxies.md
-
-    markdown/mainmatter/2.objects/ones-and-twos.md
+    markdown/mainmatter/0.the-big-idea/3.summary.md
 
 
-  markdown/mainmatter/3.methods/title.md
+  markdown/backmatter/1.objects/title.md
 
-    markdown/mainmatter/3.methods/what.md
+    markdown/backmatter/1.objects/1.data-structures.md
 
-    markdown/mainmatter/3.methods/this.md
+    markdown/backmatter/1.objects/2.pojos.md
 
-    markdown/mainmatter/3.methods/literal-vs-semantic.md
+    markdown/backmatter/1.objects/3.encapsulation.md
 
-    markdown/mainmatter/3.methods/composite.md
+    markdown/backmatter/1.objects/4.composition-and-extension.md
 
-    markdown/mainmatter/3.methods/metamethods.md
+    markdown/backmatter/1.objects/5.this.md
 
-    markdown/mainmatter/3.methods/pattern-matching.md
+    markdown/backmatter/1.objects/6.context.md
+
+    markdown/backmatter/1.objects/7.extend-pojo.md
+
+
+  markdown/backmatter/2.object-recipes/title.md
+
+    markdown/backmatter/2.object-recipes/2.immutable-properties.md
+
+    markdown/backmatter/2.object-recipes/4.accessors.md
+
+    markdown/backmatter/2.object-recipes/5.hiding.md
+
+    markdown/backmatter/2.object-recipes/6.proxies.md
+
+
+  markdown/mainmatter/3.prototypes/title.md
+
+    markdown/mainmatter/3.prototypes/1a.simple.md
+
+    markdown/mainmatter/3.prototypes/1b.queues.md
+
+    markdown/mainmatter/3.prototypes/2.binding.md
+
+    markdown/mainmatter/3.prototypes/5.object-methods.md
+
+    markdown/mainmatter/3.prototypes/6.extends.md
 
 
   markdown/mainmatter/6.metaobjects/title.md
@@ -106,35 +115,6 @@ mainmatter:
 
 
 backmatter:
-
-
-  markdown/backmatter/1.lungo/title.md
-
-    markdown/backmatter/1.lungo/0-introduction.md
-
-    markdown/backmatter/1.lungo/1-pojos.md
-
-    markdown/backmatter/1.lungo/3-objects/1.encapsulation.md
-
-    markdown/backmatter/1.lungo/3-objects/2.composition-and-extension.md
-
-    markdown/backmatter/1.lungo/3-objects/3.this.md
-
-    markdown/backmatter/1.lungo/3-objects/4.context.md
-
-    markdown/backmatter/1.lungo/3-objects/6.extend-pojo.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/1a.simple.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/1b.queues.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/2.binding.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/5.object-methods.md
-
-    markdown/backmatter/1.lungo/4-instances-and-classes/6.extends.md
-
-    markdown/backmatter/1.lungo/summary.md
 
 
 

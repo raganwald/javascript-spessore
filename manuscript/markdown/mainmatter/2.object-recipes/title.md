@@ -1,4 +1,4 @@
-# The Object's The Thing {#object}
+# Object Recipes {#object-recipes}
 
 ![Londinium 1 Lever Espresso Machine](images/erickson.jpg)[^erickson]
 
@@ -8,4 +8,4 @@
 
 A> ### In This Chapter
 A>
-A> In this chapter, we'll review JavaScript's objects, paying special attention to objects that have methods and state. Our goal will be to refresh our understanding of what we already know, we won't be trying to develop brand-new programming approaches.
+A> In this chapter, we'll review some of the things you can do with JavaScript's objects, especially with the way properties are defined and used.
