@@ -137,24 +137,24 @@ function encapsulate (behaviour) {
           return methodName[0] !== '_';
         }),
       dependencies = properties.filter(function (methodName) {
-		    return isUndefined(behaviour[methodName]);
-		  }),
-			methodsToProxy = publicMethods.concat(dependencies),
+        return isUndefined(behaviour[methodName]);
+      }),
+      methodsToProxy = publicMethods.concat(dependencies),
       encapsulatedObject = {};
 
-	function createContext (methodReceiver) {
-		var innerProxy = partialProxy(methodReceiver, methodsToProxy);
-	
-		privateMethods.forEach(function (methodName) {
-			innerProxy[methodName] = behaviour[methodName];
-		});
-		
-	  return Object.defineProperty(
-	    innerProxy,
-	    'self',
-	    { writable: false, enumerable: false, value: methodReceiver }
-	  );
-	}
+  function createContext (methodReceiver) {
+    var innerProxy = partialProxy(methodReceiver, methodsToProxy);
+  
+    privateMethods.forEach(function (methodName) {
+      innerProxy[methodName] = behaviour[methodName];
+    });
+    
+    return Object.defineProperty(
+      innerProxy,
+      'self',
+      { writable: false, enumerable: false, value: methodReceiver }
+    );
+  }
 
   function getContext (methodReceiver) {
     var context = methodReceiver[safekeepingName];

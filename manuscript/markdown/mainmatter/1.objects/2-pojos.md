@@ -35,13 +35,13 @@ Like all containers, objects can contain any value, including functions:
     var Arithmetic = {
       abs: function abs (number) {
         return number < 0 ? -number : number;
-			},
-			power: function power (number, exponent) {
-				if (exponent <= 0) {
-					return 1;
-				}
-				else return number * power(number, exponent-1);
-			}
+      },
+      power: function power (number, exponent) {
+        if (exponent <= 0) {
+          return 1;
+        }
+        else return number * power(number, exponent-1);
+      }
     };
 
     Arithmetic.abs(-5)
@@ -83,10 +83,10 @@ In contrast, here's a data structure implemented with a dictionary, the "cons ce
 
 ~~~~~~~~
 function cons (value, list) {
-	return {
-		_a: value,
-		_d: list
-	};
+  return {
+    _a: value,
+    _d: list
+  };
 }
 ~~~~~~~~
 
