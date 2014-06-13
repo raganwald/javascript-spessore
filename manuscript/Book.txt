@@ -99,6 +99,13 @@ mainmatter:
     markdown/mainmatter/7.encapsulation/9.decorating-metaobjects.md
 
 
+  markdown/mainmatter/8.inheritance/title.md
+
+  	markdown/mainmatter/8.inheritance/1.hierarchies.md
+
+  	markdown/mainmatter/8.inheritance/2.semantics.md
+
+
   markdown/mainmatter/9.mops/title.md
 
     markdown/mainmatter/9.mops/0.genesis.md
