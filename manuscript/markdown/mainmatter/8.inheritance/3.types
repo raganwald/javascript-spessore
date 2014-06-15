@@ -1,0 +1,41 @@
+## Reflecting on Types
+
+A long-cherished principle of dynamic languages is that programs employ "Duck" or "Structural" typing. So if we write:
+
+~~~~~~~~
+function deposit (account, instrument) {
+  account.dollars += instrument.dollars;
+  account.cents   += instrument.cents;
+  account.dollars += Math.floor(account.cents / 100);
+  account.cents    = account.cents % 100;
+  return account;
+}
+~~~~~~~~
+
+This works for things that look like cheques, and for things that look like money orders:[^wellactually]
+
+~~~~~~~~
+cheque = {
+  dollars: 100,
+  cents: 0,
+  number: 6
+}
+
+deposit(currentAccount, cheque);
+
+moneyOrder = {
+  dollars: 100,
+  cents: 0,
+  fee: 1.50
+}
+
+deposit(currentAccount, moneyOrder);
+~~~~~~~~
+
+[^wellactually]: There're good things we can say about why we should consider making an `amount` property, and/or encapsulate these structs so they behave like objects, but this gives the general idea of structural typing.
+
+The general idea here is that as long as we pass `deposit` an `instrument` that has `dollars` and `cents` properties, the function will work. We can think about `hasDollarsAndCents` as a "type," and we can say that programming in a dynamic language like JavaScript is programming in a world where there is a many-many relationship between types and entities.
+
+Every single entity that has `dollars` and `cents` has the imaginary type `hasDollarsAndCents`, and every single function that takes a parameter and uses only its `dollars` and `cents` properties is a function that requires a parameter of type `hasDollarsAndCents`.
+
+There is no checking of this in advance, like some other languages, but there also isn't any explicit declaration of these types. They exist logically in the running system, but not manifestly in the code we write.
