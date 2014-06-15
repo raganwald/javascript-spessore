@@ -37,7 +37,7 @@ mainmatter:
 
   markdown/mainmatter/2.object-recipes/title.md
 
-    markdown/mainmatter/2.object-recipes/2.immutable-properties.md
+    markdown/mainmatter/2.object-recipes/2.structs.md
 
     markdown/mainmatter/2.object-recipes/4.accessors.md
 
