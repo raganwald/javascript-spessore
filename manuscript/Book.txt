@@ -107,6 +107,10 @@ mainmatter:
 
   	markdown/mainmatter/8.inheritance/3.duck.md
 
+  	markdown/mainmatter/8.inheritance/4.is-a-was-a.md
+
+  	markdown/mainmatter/8.inheritance/5.expression.md
+
 
   markdown/mainmatter/9.mops/title.md
 
