@@ -105,7 +105,7 @@ mainmatter:
 
   	markdown/mainmatter/8.inheritance/2.semantics.md
 
-  	markdown/mainmatter/8.inheritance/3.types.md
+  	markdown/mainmatter/8.inheritance/3.duck.md
 
 
   markdown/mainmatter/9.mops/title.md
