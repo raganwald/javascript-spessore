@@ -1,4 +1,4 @@
-# Encapsulation and Composition
+# Encapsulation and Composition {#encapsulation-and-composition}
 
 ![Nespresso Capsules](images/7/capsules.jpg)[^capsules]
 
