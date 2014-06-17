@@ -22,7 +22,7 @@ Sometimes, people use this simple object creation problem in JavaScript:
 Or they use this variation, which is different in some respects, but ultimately solves the same problems the same way:
 
     var ChequingAccountPrototype = {
-      initialize: function () {
+      constructor: function () {
         this.balance = 0;
         return this;
       },
@@ -36,7 +36,7 @@ Or they use this variation, which is different in some respects, but ultimately 
       }
     }
 
-    var account = Object.create(ChequingAccountPrototype).initialize();
+    var account = Object.create(ChequingAccountPrototype).constructor();
 
     // ...
 
@@ -61,7 +61,7 @@ And all is well for a very long time with this pattern. Or at least, it *should*
 This problem is deceptively easy to solve with prototypes: Prototypes are objects, and objects can have prototypes, so we give our prototypes a prototype!
 
     var AbstractBankAccountPrototype = {
-      initialize: function () {
+      constructor: function () {
         this.balance = 0;
         return this;
       },
@@ -78,7 +78,7 @@ This problem is deceptively easy to solve with prototypes: Prototypes are object
       return this;
     };
 
-    var account = Object.create(ChequingAccountPrototype).initialize();
+    var account = Object.create(ChequingAccountPrototype).constructor();
 
     typeof(account.deposit)
       //=> 'function'
@@ -151,7 +151,7 @@ We can't give it behaviour through a prototype, so we have to manually assign me
 Now, instead of writing `account = Object.create(ChequingAccountPrototype)`, we write:
 
     var Account = mixin({
-      initialize: function () {
+      constructor: function () {
         this.balance = 0;
         return this;
       },
@@ -161,8 +161,8 @@ Now, instead of writing `account = Object.create(ChequingAccountPrototype)`, we 
       }
     });
 
-    var account = Account().initialize();
-      //=> { initialize: [Function],
+    var account = Account().constructor();
+      //=> { constructor: [Function],
              deposit: [Function],
              balance: 0 }
 
@@ -177,8 +177,8 @@ This design has an advantage over prototypes: All of our "mixins" are symmetrica
       }
     });
 
-    var account = Chequing(Account()).initialize();
-      //=> { initialize: [Function],
+    var account = Chequing(Account()).constructor();
+      //=> { constructor: [Function],
              deposit: [Function],
              processCheque: [Function],
              balance: 0 }
@@ -228,7 +228,7 @@ Using a different strategy for differentiating properties from mixed in behaviou
     }
 
     var Account2 = mixNonEnumerableIn({
-      initialize: function () {
+      constructor: function () {
         this.balance = 0;
         return this;
       },
@@ -245,7 +245,7 @@ Using a different strategy for differentiating properties from mixed in behaviou
       }
     });
 
-    var account2 = Chequing2(Account2()).initialize();
+    var account2 = Chequing2(Account2()).constructor();
       //=> { balance: 0 }
 
 Now it doesn't matter whether we check for `.hasOwnProperty` or not:
@@ -263,7 +263,7 @@ The disadvantage of making our methods non-enumerable is the sometimes we want t
 
 We use our original `mixin` pattern, but we mix our behaviour into an object that will be our new object's prototype, like this:
 
-    var account3 = Object.create( Account(Chequing({})) ).initialize();
+    var account3 = Object.create( Account(Chequing({})) ).constructor();
       //=> { balance: 0 }
 
 Now all of the methods are mixed into `account3`'s prototype, so we can use almost of the patterns that apply to trees of prototypes created in the old-fashioned style. For example, we can use `.hasOwnProperty` as we did with prototype chains. Try it for yourself:

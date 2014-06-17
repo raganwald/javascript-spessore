@@ -226,7 +226,7 @@ function propertiesToArrays (metaobjects) {
       else collected[key] = [metaobject[key]]
     }
     return collected;
-  }, {})
+  }, Object.create(null))
 }
 
 function resolveUndefineds (collected) {
@@ -307,4 +307,18 @@ function composeMetaobjects () {
   return composed;
 }
 
+function Constructor (optionalName, metaobject) {
+	var name        = typeof(optionalName) === 'string'
+	                  ? optionalName
+										: '',
+		  metaobject  = arguments.length > 1
+			              ? metaobject
+										: optionalName,
+	    constructor = (metaobject.constructor || function () {}),
+			source      = "(function " + name + " () { var r = constructor.apply(this, arguments); return r === undefined ? this : r; })",
+			clazz       = eval(source);
+	
+	clazz.prototype = metaobject;
+	return clazz;
+}
 ~~~~~~~~

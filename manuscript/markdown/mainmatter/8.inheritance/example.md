@@ -22,7 +22,7 @@ function extend () {
 };
 
 var Songwriter = {
-  initialize: function () {
+  constructor: function () {
     this._songs = [];
     return this;
   },
@@ -39,7 +39,7 @@ var Songwriter = {
 };
 
 var Subscribable = {
-  initialize: function () {
+  constructor: function () {
     this._subscribers = [];
     return this;
   },
@@ -66,9 +66,9 @@ var SubscribableSongwriter = extend(
 	Object.create(Songwriter), 
 	Subscribable,
 	{
-	  initialize: function () {
-	    Songwriter.initialize.apply(this, arguments);
-	    return Subscribable.initialize.apply(this, arguments);
+	  constructor: function () {
+	    Songwriter.constructor.apply(this, arguments);
+	    return Subscribable.constructor.apply(this, arguments);
 	  },
 	  addSong: function () {
 	    var returnValue = Songwriter.addSong.apply(this, arguments);
@@ -78,10 +78,10 @@ var SubscribableSongwriter = extend(
 	}
 );
 
-var sweetBabyJames = Object.create(SubscribableSongwriter).initialize();
+var sweetBabyJames = Object.create(SubscribableSongwriter).constructor();
 
 var SongwriterView = {
-  initialize: function (model, name) {
+  constructor: function (model, name) {
     this.model = model;
     this.name = name;
     this.model.subscribe(this.render.bind(this));
@@ -105,7 +105,7 @@ var SongwriterView = {
   }
 };
 
-var jamesView = Object.create(SongwriterView).initialize(sweetBabyJames, 'James Taylor');
+var jamesView = Object.create(SongwriterView).constructor(sweetBabyJames, 'James Taylor');
 
 sweetBabyJames.addSong('Fire and Rain');
   //=>

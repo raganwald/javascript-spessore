@@ -230,7 +230,7 @@ So let's fix that: Here's our use case:
 
 ~~~~~~~~
 var HasChildren = {
-  initialize: function () {
+  constructor: function () {
     this._children = [];
     return this;
   },
@@ -244,7 +244,7 @@ var HasChildren = {
 };
 
 var IsAuthor = {
-  initialize: function () {
+  constructor: function () {
     this._books = [];
     return this;
   },
@@ -262,7 +262,7 @@ We'll make a temporary change:
 
 ~~~~~~~~
 var HasChildren = {
-  initialize: {
+  constructor: {
     after: function () {
       this._children = [];
       return this;
@@ -278,7 +278,7 @@ var HasChildren = {
 };
 
 var IsAuthor = {
-  initialize: {
+  constructor: {
     after: function () {
       this._books = [];
       return this;
@@ -397,7 +397,7 @@ function composeMixins () {
 
 composeMixins(HasChildren, IsAuthor)
   //=>
-  { initialize: [Function],
+  { constructor: [Function],
     addChild: [Function],
     numberOfChildren: [Function],
     addBook: [Function],
@@ -423,7 +423,7 @@ function resolve(mixin, policySpecification) {
 }
 
 var HasChildren = {
-  initialize: function () {
+  constructor: function () {
     this._children = [];
     return this;
   },
@@ -437,7 +437,7 @@ var HasChildren = {
 };
 
 var IsAuthor = {
-  initialize: function () {
+  constructor: function () {
     this._books = [];
     return this;
   },
