@@ -98,6 +98,8 @@ mainmatter:
 
     markdown/mainmatter/7.encapsulation/9.decorating-metaobjects.md
 
+    markdown/mainmatter/7.encapsulation/10.constructors.md
+
 
   markdown/mainmatter/8.inheritance/title.md
 

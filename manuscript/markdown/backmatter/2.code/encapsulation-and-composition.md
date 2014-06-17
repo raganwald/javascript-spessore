@@ -144,11 +144,11 @@ function encapsulate (behaviour) {
 
   function createContext (methodReceiver) {
     var innerProxy = partialProxy(methodReceiver, methodsToProxy);
-  
+
     privateMethods.forEach(function (methodName) {
       innerProxy[methodName] = behaviour[methodName];
     });
-    
+
     return Object.defineProperty(
       innerProxy,
       'self',
@@ -307,18 +307,39 @@ function composeMetaobjects () {
   return composed;
 }
 
-function Constructor (optionalName, metaobject) {
+function Newable (optionalName, metaobject, optionalSuper) {
 	var name        = typeof(optionalName) === 'string'
 	                  ? optionalName
 										: '',
-		  metaobject  = arguments.length > 1
+		  metaobject  = typeof(optionalName) === 'string'
 			              ? metaobject
 										: optionalName,
-	    constructor = (metaobject.constructor || function () {}),
-			source      = "(function " + name + " () { var r = constructor.apply(this, arguments); return r === undefined ? this : r; })",
-			clazz       = eval(source);
-	
-	clazz.prototype = metaobject;
+		  superClazz  = typeof(optionalName) === 'string'
+			              ? optionalSuper
+										: metaobject,
+			source      = "(function " + name + " () { " +
+                        "var r = constructor.apply(this, arguments); " +
+                        "return r === undefined ? this : r; " +
+                      "})",
+			clazz       = eval(source),
+      constructor;
+
+  if (typeof(metaobject.constructor) === 'function' && typeof(optionalSuper) === 'function') {
+    constructor = function () {
+      optionalSuper.apply(this, arguments);
+      return metaobject.constructor.apply(this, arguments);
+    }
+  }
+  else if (typeof(metaobject.constructor) === 'function') {
+    constructor = metaobject.constructor;
+  }
+  else if (typeof(optionalSuper) === 'function') {
+    constructor = optionalSuper;
+  }
+  else constructor = function () {}
+
+	clazz.prototype = extend({}, metaobject);
+	delete clazz.prototype.constructor;
 	return clazz;
 }
 ~~~~~~~~
