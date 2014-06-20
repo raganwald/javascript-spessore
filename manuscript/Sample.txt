@@ -13,13 +13,21 @@ frontmatter:
 mainmatter:
 
 
-  markdown/mainmatter/0.the-big-idea/title.md
+  markdown/mainmatter/6.metaobjects/title.md
 
-    markdown/mainmatter/0.the-big-idea/1.functions-and-objects.md
+    markdown/mainmatter/6.metaobjects/0.why.md
 
-    markdown/mainmatter/0.the-big-idea/2.javascript-algebras.md
+    markdown/mainmatter/6.metaobjects/1.mixins.md
 
-    markdown/mainmatter/0.the-big-idea/3.summary.md
+    markdown/mainmatter/6.metaobjects/2.later-binding.md
+
+    markdown/mainmatter/6.metaobjects/3.policies.md
+
+    markdown/mainmatter/6.metaobjects/4.prototypes.md
+
+    markdown/mainmatter/6.metaobjects/5.singletons.md
+
+    markdown/mainmatter/6.metaobjects/6.shared-prototypes.md
 
 
   markdown/mainmatter/7.encapsulation/title.md
@@ -43,6 +51,8 @@ mainmatter:
     markdown/mainmatter/7.encapsulation/8.composing-metaobjects.md
 
     markdown/mainmatter/7.encapsulation/9.decorating-metaobjects.md
+
+    markdown/mainmatter/7.encapsulation/10.constructors.md
 
 
 backmatter:
