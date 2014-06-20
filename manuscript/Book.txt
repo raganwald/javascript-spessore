@@ -1,4 +1,4 @@
-.frontmatter:
+frontmatter:
 
   markdown/frontmatter/title.md
 
