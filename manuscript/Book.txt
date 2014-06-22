@@ -59,6 +59,19 @@ mainmatter:
     markdown/mainmatter/3.prototypes/6.extends.md
 
 
+  markdown/mainmatter/4.methods/title.md
+
+  	markdown/mainmatter/4.methods/1.what.md
+
+  	markdown/mainmatter/4.methods/2.semantic.md
+
+  	markdown/mainmatter/4.methods/3.composite.md
+
+  	markdown/mainmatter/4.methods/4.method-objects.md
+
+  	markdown/mainmatter/4.methods/5.pattern-matching.md
+
+
   markdown/mainmatter/6.metaobjects/title.md
 
     markdown/mainmatter/6.metaobjects/0.why.md
@@ -112,6 +125,8 @@ mainmatter:
   	markdown/mainmatter/8.inheritance/4.is-a-was-a.md
 
   	markdown/mainmatter/8.inheritance/5.expression.md
+
+  	markdown/mainmatter/8.inheritance/6.cases.md
 
 
   markdown/mainmatter/9.mops/title.md
