@@ -15,7 +15,7 @@ Building interpreters (and eventually compilers) may seem esoteric compared to t
 
 Implementing a language feature teaches you a tremendous amount about how the feature works in a relatively short amount of time. And that goes double for implementing variations on the same feature--like dynamic vs block scoping or single vs multiple namespaces.
 
-### j(js)s
+### j(oop)s
 
 In this book, we are going to implement a variety of object-oriented programming language semantics, in JavaScript. We will implement different object semantics, implement different kinds of metaobjects, and implement different kinds of method protocols.
 

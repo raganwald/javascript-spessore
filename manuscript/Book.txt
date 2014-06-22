@@ -15,7 +15,7 @@ mainmatter:
 
     markdown/mainmatter/0.the-big-idea/2.javascript-algebras.md
 
-    markdown/mainmatter/0.the-big-idea/3.summary.md
+    markdown/mainmatter/0.the-big-idea/3.composeability.md
 
 
   markdown/mainmatter/1.objects/title.md
@@ -140,8 +140,6 @@ mainmatter:
     markdown/mainmatter/9.mops/3.well-actually.md
 
     markdown/mainmatter/9.mops/4.composing-method-behaviour.md
-
-    markdown/mainmatter/9.mops/todo.md
 
 
 backmatter:

@@ -13,6 +13,15 @@ frontmatter:
 mainmatter:
 
 
+  markdown/mainmatter/0.the-big-idea/title.md
+
+    markdown/mainmatter/0.the-big-idea/1.functions-and-objects.md
+
+    markdown/mainmatter/0.the-big-idea/2.javascript-algebras.md
+
+    markdown/mainmatter/0.the-big-idea/3.composeability.md
+
+
   markdown/mainmatter/6.metaobjects/title.md
 
     markdown/mainmatter/6.metaobjects/0.why.md
