@@ -139,8 +139,6 @@ mainmatter:
 
     markdown/mainmatter/9.mops/3.well-actually.md
 
-    markdown/mainmatter/9.mops/4.composing-method-behaviour.md
-
 
 backmatter:
 
