@@ -152,4 +152,6 @@ backmatter:
 
     markdown/backmatter/2.code/encapsulation-and-composition.md
 
+    markdown/backmatter/2.code/methods.md
+
     markdown/backmatter/2.code/utilities.md
