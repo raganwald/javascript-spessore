@@ -69,7 +69,7 @@ mainmatter:
 
   	markdown/mainmatter/4.methods/4.method-objects.md
 
-  	markdown/mainmatter/4.methods/5.pattern-matching.md
+  	markdown/mainmatter/4.methods/5.predicate-dispatch.md
 
 
   markdown/mainmatter/6.metaobjects/title.md
@@ -126,7 +126,7 @@ mainmatter:
 
   	markdown/mainmatter/8.inheritance/5.expression.md
 
-  	markdown/mainmatter/8.inheritance/6.cases.md
+  	markdown/mainmatter/8.inheritance/6.multiple-disptach.md
 
 
   markdown/mainmatter/9.mops/title.md
