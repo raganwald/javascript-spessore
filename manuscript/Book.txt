@@ -146,8 +146,12 @@ backmatter:
 
   markdown/backmatter/2.code/title.md
 
-    markdown/backmatter/2.code/encapsulation-and-composition.md
+    markdown/backmatter/2.code/2.object-recipes.md
 
-    markdown/backmatter/2.code/methods.md
+    markdown/backmatter/2.code/4.methods.md
+
+    markdown/backmatter/2.code/7.encapsulation.md
+
+    markdown/backmatter/2.code/8.inheritance.md
 
     markdown/backmatter/2.code/utilities.md
