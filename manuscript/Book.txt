@@ -88,6 +88,8 @@ mainmatter:
 
     markdown/mainmatter/6.metaobjects/6.shared-prototypes.md
 
+    markdown/mainmatter/6.metaobjects/7.self.md
+
 
   markdown/mainmatter/7.encapsulation/title.md
 
@@ -149,6 +151,8 @@ backmatter:
     markdown/backmatter/2.code/2.object-recipes.md
 
     markdown/backmatter/2.code/4.methods.md
+
+    markdown/backmatter/2.code/6.metaobjects.md
 
     markdown/backmatter/2.code/7.encapsulation.md
 
