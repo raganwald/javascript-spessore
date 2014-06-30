@@ -72,23 +72,26 @@ mainmatter:
   	markdown/mainmatter/4.methods/5.predicate-dispatch.md
 
 
-  markdown/mainmatter/6.metaobjects/title.md
+  markdown/mainmatter/5.metaobjects/title.md
 
-    markdown/mainmatter/6.metaobjects/0.why.md
+    markdown/mainmatter/5.metaobjects/0.why.md
 
-    markdown/mainmatter/6.metaobjects/1.mixins.md
+    markdown/mainmatter/5.metaobjects/1.mixins.md
 
-    markdown/mainmatter/6.metaobjects/2.later-binding.md
+    markdown/mainmatter/5.metaobjects/2.later-binding.md
 
-    markdown/mainmatter/6.metaobjects/3.policies.md
+    markdown/mainmatter/5.metaobjects/3.policies.md
 
-    markdown/mainmatter/6.metaobjects/4.prototypes.md
+    markdown/mainmatter/5.metaobjects/4.prototypes.md
 
-    markdown/mainmatter/6.metaobjects/5.singletons.md
+    markdown/mainmatter/5.metaobjects/5.singletons.md
 
-    markdown/mainmatter/6.metaobjects/6.shared-prototypes.md
+    markdown/mainmatter/5.metaobjects/6.shared-prototypes.md
 
-    markdown/mainmatter/6.metaobjects/7.self.md
+    markdown/mainmatter/5.metaobjects/7.self.md
+    
+
+  markdown/mainmatter/6.greenspun.md
 
 
   markdown/mainmatter/7.encapsulation/title.md
@@ -152,7 +155,7 @@ backmatter:
 
     markdown/backmatter/2.code/4.methods.md
 
-    markdown/backmatter/2.code/6.metaobjects.md
+    markdown/backmatter/2.code/5.metaobjects.md
 
     markdown/backmatter/2.code/7.encapsulation.md
 
