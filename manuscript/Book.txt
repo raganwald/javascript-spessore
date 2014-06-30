@@ -147,8 +147,6 @@ mainmatter:
 
 backmatter:
 
-
-
   markdown/backmatter/2.code/title.md
 
     markdown/backmatter/2.code/2.object-recipes.md
@@ -156,6 +154,8 @@ backmatter:
     markdown/backmatter/2.code/4.methods.md
 
     markdown/backmatter/2.code/5.metaobjects.md
+
+    markdown/backmatter/2.code/6.greenspun.md
 
     markdown/backmatter/2.code/7.encapsulation.md
 
