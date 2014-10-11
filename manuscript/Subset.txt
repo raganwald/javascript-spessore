@@ -1,7 +1,0 @@
-  markdown/mainmatter/5.metaobjects/title.md
-
-    markdown/mainmatter/5.metaobjects/1.mixins.md
-
-    markdown/mainmatter/5.metaobjects/2.later-binding.md
-
-    markdown/mainmatter/5.metaobjects/3.policies.md

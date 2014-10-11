@@ -162,3 +162,7 @@ backmatter:
     markdown/backmatter/2.code/8.inheritance.md
 
     markdown/backmatter/2.code/utilities.md
+
+  markdown/backmatter/3.copyright.md
+
+  markdown/backmatter/4.reg.md
