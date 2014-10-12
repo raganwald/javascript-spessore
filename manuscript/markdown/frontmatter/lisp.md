@@ -19,7 +19,7 @@ Implementing a language feature teaches you a tremendous amount about how the fe
 
 In this book, we are going to implement saveral different kinds of object-oriented programming language semantics, in JavaScript. We will implement some object semantics, some metaobjects, and some method protocols.
 
-We'll see how to use JavaScript's basic building blocks to implement things like private state, delegation, rotected methods, and more.
+We'll see how to use JavaScript's basic building blocks to implement things like private state, delegation, protected methods, and more.
 
 Unlike other books and tutorials, we won't focus on how to write object-oriented programs. We won't worry about patterns like "Facade," or walk through an "extract method" refactoring. We'll trust that there are more than enough existing resources covering these topics, and focus instead on the areas generally given short shrift by existing texts.
 
