@@ -1,4 +1,4 @@
-## JavaScript Allongé and allong.es
+## JavaScript Allongé
 
 [JavaScript Spessore][js] is written for the reader who has read [JavaScript Allongé][ja] or has equivalent experience with JavaScript, especially as it pertains to functions, closures, and prototypes.
 

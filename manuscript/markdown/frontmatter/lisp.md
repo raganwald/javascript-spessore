@@ -1,6 +1,6 @@
 ## Taking a page out of LiSP
 
-Teaching Lisp by implementing Lisp is a long-standing tradition. If you set out to learn to program with Lisp, you will find read book after book, lecture after lecture, and blog post after blog post, all explaining how to implement Lisp in Lisp. Christian Queinnec's [Lisp in Small Pieces][LiSP] is particularly notable, not just implementing a Lisp in Lisp, but covering a wide range of different semantics within Lisp.
+Teaching Lisp by implementing Lisp is a long-standing tradition. If you set out to learn to program with Lisp, you will find book after book, lecture after lecture, and blog post after blog post, all explaining how to implement Lisp in Lisp. Christian Queinnec's [Lisp in Small Pieces][LiSP] is particularly notable, not just implementing a Lisp in Lisp, but covering a wide range of different semantics within Lisp.
 
 [LiSP]: http://www.amazon.com/gp/product/B00AKE1U6O/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00AKE1U6O&linkCode=as2&tag=raganwald001-20
 
