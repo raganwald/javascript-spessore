@@ -2,9 +2,9 @@
 
 [JavaScript Allongé][ja] is a book that explains programming in JavaScript beginning with the most basic unit of computation JavaScript offers: The function. Although it is not a book about functional programming in the large, it is very definitely a book about thinking in functions.
 
-[ja]: https://leanpub.com/javascript-allonge
+[ja]: https://leanpub.com/javascriptallongesix
 
-Of course, JavaScript also has objects and methods. JavaScript Allongé explains how JavaScript uses functions to implement methods and prototypes, and it shows you how to encapsulate private object state, and how to write things that many languages call "classes," and how to chain prototypes to emulate what many languages call "inheritance."
+Of course, JavaScript also has objects and methods. JavaScript Allongé explains how JavaScript uses functions to implement methods and prototypes, and it shows you how to encapsulate private object state, how to write classes, and how to use mixins.
 
 This is certainly more than enough to write great works of software. But the curious mind cannot help but ask questions.  Clearly, JavaScript is doing something different from a language like Ruby:
 

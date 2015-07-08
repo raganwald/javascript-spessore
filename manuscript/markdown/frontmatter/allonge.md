@@ -11,11 +11,11 @@
 > “It's a different approach to JavaScript than you'll find in most other places and shines a light on some of the more elegant parts of JavaScript the language.”--@jeremymorrell
 
 [js]: https://leanpub.com/javascript-spessore
-[ja]: https://leanpub.com/javascript-allonge
+[ja]: https://leanpub.com/javascriptallongesix
 
 Even if you know the material, you may want to read JavaScript Allongé to familiarize yourself its approach to functional combinators. You can [read it for free online][read].
 
-[read]: https://leanpub.com/javascript-allonge/read
+[read]: https://leanpub.com/javascriptallongesix/read
 
 ### allong.es
 

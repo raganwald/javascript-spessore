@@ -18,5 +18,5 @@ In [The Big Idea](#big-idea), we will look at an oft-overlooked central idea of 
 
 We'll dive into the notion of [Metaobjects](#metaobjects), objects that define the behaviour of other objects.
 
-[ja]: https://leanpub.com/javascript-allonge
+[ja]: https://leanpub.com/javascriptallongesix
 [js]: https://leanpub.com/javascript-spessore

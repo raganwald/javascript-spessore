@@ -17,7 +17,7 @@ Or you can use this formulation:
 
 [underscore]: http://underscorejs.org
 [allong.es]: http://allong.es
-[ja]: https://leanpub.com/javascript-allonge
+[ja]: https://leanpub.com/javascriptallongesix
 
 ### pipeline
 
