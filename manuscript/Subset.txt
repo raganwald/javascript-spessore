@@ -1,0 +1,168 @@
+frontmatter:
+
+  six-edition/frontmatter/title.md
+
+    six-edition/frontmatter/lisp.md
+
+    six-edition/frontmatter/allonge.md
+
+mainmatter:
+
+
+  six-edition/mainmatter/0.the-big-idea/title.md
+
+    six-edition/mainmatter/0.the-big-idea/1.functions-and-objects.md
+
+    six-edition/mainmatter/0.the-big-idea/2.javascript-algebras.md
+
+    six-edition/mainmatter/0.the-big-idea/3.composeability.md
+
+
+  six-edition/mainmatter/1.objects/title.md
+
+    six-edition/mainmatter/1.objects/1.data-structures.md
+
+    six-edition/mainmatter/1.objects/2.pojos.md
+
+    six-edition/mainmatter/1.objects/3.encapsulation.md
+
+    six-edition/mainmatter/1.objects/4.composition-and-extension.md
+
+    six-edition/mainmatter/1.objects/5.this.md
+
+    six-edition/mainmatter/1.objects/6.context.md
+
+    six-edition/mainmatter/1.objects/7.extend-pojo.md
+
+
+  six-edition/mainmatter/2.object-recipes/title.md
+
+    six-edition/mainmatter/2.object-recipes/2.structs.md
+
+    six-edition/mainmatter/2.object-recipes/4.accessors.md
+
+    six-edition/mainmatter/2.object-recipes/5.hiding.md
+
+    six-edition/mainmatter/2.object-recipes/6.proxies.md
+
+
+  six-edition/mainmatter/3.prototypes/title.md
+
+    six-edition/mainmatter/3.prototypes/1a.simple.md
+
+    six-edition/mainmatter/3.prototypes/1b.queues.md
+
+    six-edition/mainmatter/3.prototypes/2.binding.md
+
+    six-edition/mainmatter/3.prototypes/5.object-methods.md
+
+    six-edition/mainmatter/3.prototypes/6.extends.md
+
+
+  six-edition/mainmatter/4.methods/title.md
+
+  	six-edition/mainmatter/4.methods/1.what.md
+
+  	six-edition/mainmatter/4.methods/2.semantic.md
+
+  	six-edition/mainmatter/4.methods/3.composite.md
+
+  	six-edition/mainmatter/4.methods/4.method-objects.md
+
+  	six-edition/mainmatter/4.methods/5.predicate-dispatch.md
+
+
+  six-edition/mainmatter/5.metaobjects/title.md
+
+    six-edition/mainmatter/5.metaobjects/0.why.md
+
+    six-edition/mainmatter/5.metaobjects/1.mixins.md
+
+    six-edition/mainmatter/5.metaobjects/2.later-binding.md
+
+    six-edition/mainmatter/5.metaobjects/3.policies.md
+
+    six-edition/mainmatter/5.metaobjects/4.prototypes.md
+
+    six-edition/mainmatter/5.metaobjects/5.singletons.md
+
+    six-edition/mainmatter/5.metaobjects/6.shared-prototypes.md
+
+    six-edition/mainmatter/5.metaobjects/7.self.md
+
+
+  six-edition/mainmatter/6.greenspun.md
+
+
+  six-edition/mainmatter/7.encapsulation/title.md
+
+    six-edition/mainmatter/7.encapsulation/0.problem.md
+
+    six-edition/mainmatter/7.encapsulation/1.proxies-again.md
+
+    six-edition/mainmatter/7.encapsulation/2.metaobjects.md
+
+    six-edition/mainmatter/7.encapsulation/3.the-encapsulate-function.md
+
+    six-edition/mainmatter/7.encapsulation/4.self.md
+
+    six-edition/mainmatter/7.encapsulation/5.privacy.md
+
+    six-edition/mainmatter/7.encapsulation/6.closed.md
+
+    six-edition/mainmatter/7.encapsulation/7.partial-proxies.md
+
+    six-edition/mainmatter/7.encapsulation/8.composing-metaobjects.md
+
+    six-edition/mainmatter/7.encapsulation/9.decorating-metaobjects.md
+
+    six-edition/mainmatter/7.encapsulation/10.constructors.md
+
+
+  six-edition/mainmatter/8.inheritance/title.md
+
+  	six-edition/mainmatter/8.inheritance/1.hierarchies.md
+
+  	six-edition/mainmatter/8.inheritance/2.semantics.md
+
+  	six-edition/mainmatter/8.inheritance/3.duck.md
+
+  	six-edition/mainmatter/8.inheritance/4.is-a-was-a.md
+
+  	six-edition/mainmatter/8.inheritance/5.expression.md
+
+  	six-edition/mainmatter/8.inheritance/6.multiple-dispatch.md
+
+
+  six-edition/mainmatter/9.mops/title.md
+
+    six-edition/mainmatter/9.mops/0.genesis.md
+
+    six-edition/mainmatter/9.mops/1.classes-have-classes.md
+
+    six-edition/mainmatter/9.mops/2.class-mixins.md
+
+    six-edition/mainmatter/9.mops/3.well-actually.md
+
+
+backmatter:
+
+  six-edition/backmatter/2.code/title.md
+
+    six-edition/backmatter/2.code/2.object-recipes.md
+
+    six-edition/backmatter/2.code/4.methods.md
+
+    six-edition/backmatter/2.code/5.metaobjects.md
+
+    six-edition/backmatter/2.code/6.greenspun.md
+
+    six-edition/backmatter/2.code/7.encapsulation.md
+
+    six-edition/backmatter/2.code/8.inheritance.md
+
+    six-edition/backmatter/2.code/utilities.md
+
+  six-edition/backmatter/3.copyright.md
+
+  six-edition/backmatter/4.reg.md
