@@ -1,6 +1,6 @@
-## JavaScript Allongé
+## JavaScript Allongé, the "Six" Edition
 
-[JavaScript Spessore][js] is written for the reader who has read [JavaScript Allongé][ja] or has equivalent experience with JavaScript, especially as it pertains to functions, closures, and prototypes.
+[JavaScript Spessore, the "Six" Edition][js] is written for the reader who has read the "Six" edition of [JavaScript Allongé][ja] or has equivalent experience with JavaScript, especially as it pertains to functions, closures, and prototypes.
 
 > "This is a must-read for any developer who wants to know Javascript better... Reg has a way of explaining things in a way that connected the dots for me. This is probably the only programming book I've re-read cover to cover a dozen times or more."--etrinh
 
@@ -16,10 +16,3 @@
 Even if you know the material, you may want to read JavaScript Allongé to familiarize yourself its approach to functional combinators. You can [read it for free online][read].
 
 [read]: https://leanpub.com/javascriptallongesix/read
-
-### allong.es
-
-[allong.es] is a JavaScript library inspired by JavaScript Allongé. It contains many utility functions that are used in JavaScript Spessore's examples, such as `map`, `variadic` and `tap`. It's free, and you can even type a lot of the examples from this book into its [try allong.es][try] page and see them work.
-
-[allong.es]: http://allong.es
-[try]: http://allong.es/try/
