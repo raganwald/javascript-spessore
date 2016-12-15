@@ -19,7 +19,6 @@ Even if you know the material, you may want to read JavaScript Allongé to famil
 
 ### allong.es
 
-[allong.es] is a JavaScript library inspired by JavaScript Allongé. It contains many utility functions that are used in JavaScript Spessore's examples, such as `map`, `variadic` and `tap`. It's free, and you can even type a lot of the examples from this book into its [try allong.es][try] page and see them work.
+[allong.es] is a free JavaScript library inspired by JavaScript Allongé. It contains many utility functions that are used in JavaScript Spessore's examples, such as `map`, `variadic` and `tap`.
 
-[allong.es]: http://allong.es
-[try]: http://allong.es/try/
+[allong.es]: https://github.com/raganwald/allong.es
